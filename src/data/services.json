@@ -1,0 +1,210 @@
+{
+  "services": [
+    {
+      "id": "dent-removal-pdr",
+      "title": "Paintless Dent Repair (PDR)",
+      "shortDescription": "Non-invasive removal of dents, dings, and creases from car bodies without painting.",
+      "fullDescription": "Our Paintless Dent Repair (PDR) service is the leading method for removing minor dents, dings, and creases from your vehicle's bodywork without the need for traditional body filler or repainting. Our highly skilled technicians use specialized tools to meticulously massage the metal back to its original form from behind the panel. This preserves your car's original factory finish, maintaining its value and aesthetic appeal. Ideal for small to medium-sized dents caused by everyday incidents.",
+      "icon": "Car",
+      "category": "Dent Repair",
+      "features": [
+        "Preserves original paintwork",
+        "Faster repair times",
+        "Cost-effective solution",
+        "Environmentally friendly",
+        "Maintains vehicle resale value"
+      ],
+      "benefits": [
+        "Your car looks like new",
+        "Avoids depreciation from repainting",
+        "Quick turnaround, minimal inconvenience",
+        "No color matching issues",
+        "Eco-friendly repair process"
+      ],
+      "pricing": {
+        "startingPrice": 80,
+        "currency": "GBP",
+        "billingPeriod": "per dent"
+      },
+      "deliverables": [
+        "Restored body panel",
+        "Quality assurance check",
+        "Detailed invoice"
+      ],
+      "timeline": "1-3 hours",
+      "featured": true
+    },
+    {
+      "id": "hail-damage-repair",
+      "title": "Hail Damage Repair",
+      "shortDescription": "Expert repair of vehicles damaged by hail, restoring them to pre-damage condition using PDR.",
+      "fullDescription": "Hailstorms can cause significant damage to vehicle bodywork, leaving numerous unsightly dents. Our specialized hail damage repair service utilizes advanced PDR techniques to meticulously remove each dent, restoring your vehicle to its pre-hail condition. We work efficiently to minimize downtime and handle all types of hail damage, from minor dimples to more severe impacts. We also assist with insurance claims to ensure a smooth and hassle-free repair process.",
+      "icon": "CloudRain",
+      "category": "Dent Repair",
+      "features": [
+        "Comprehensive hail damage assessment",
+        "Advanced PDR techniques for multiple dents",
+        "Insurance claim assistance",
+        "Fast and efficient repair process",
+        "Preservation of factory finish"
+      ],
+      "benefits": [
+        "Full restoration of vehicle appearance",
+        "Seamless insurance claim experience",
+        "Avoids costly traditional body shop repairs",
+        "Maintains vehicle value",
+        "Guaranteed quality of repair"
+      ],
+      "pricing": {
+        "startingPrice": 300,
+        "currency": "GBP",
+        "billingPeriod": "per vehicle"
+      },
+      "deliverables": [
+        "Fully repaired vehicle",
+        "Insurance documentation support",
+        "Before & after photos (upon request)"
+      ],
+      "timeline": "1-3 days",
+      "featured": true
+    },
+    {
+      "id": "smart-repair-techniques",
+      "title": "Smart Repair Techniques",
+      "shortDescription": "Specialized small to medium area repair techniques for various cosmetic damages.",
+      "fullDescription": "Beyond PDR, we offer a range of Smart Repair (Small to Medium Area Repair Techniques) services to address various cosmetic damages efficiently and cost-effectively. This includes minor paint scratches, bumper scuffs, interior repairs, and alloy wheel refurbishment. Smart Repair focuses on repairing only the damaged area, rather than replacing entire panels, which saves time and money while maintaining the vehicle's integrity.",
+      "icon": "Wrench",
+      "category": "Cosmetic Repair",
+      "features": [
+        "Minor paint scratch repair",
+        "Bumper scuff removal",
+        "Alloy wheel refurbishment",
+        "Interior trim repair",
+        "Fast turnaround times"
+      ],
+      "benefits": [
+        "Cost-effective alternative to traditional repairs",
+        "Quick restoration of vehicle aesthetics",
+        "Prevents further damage and corrosion",
+        "Enhances vehicle resale value",
+        "Convenient and efficient service"
+      ],
+      "pricing": {
+        "startingPrice": 100,
+        "currency": "GBP",
+        "billingPeriod": "per repair"
+      },
+      "deliverables": [
+        "Repaired cosmetic damage",
+        "Color matching assurance",
+        "Warranty on repair"
+      ],
+      "timeline": "2-4 hours",
+      "featured": false
+    },
+    {
+      "id": "mobile-pdr-service",
+      "title": "Mobile PDR Service",
+      "shortDescription": "Convenient on-site dent repair at your home or workplace.",
+      "fullDescription": "Our mobile PDR service brings our expert technicians directly to your location, whether it's your home, office, or another convenient spot. This eliminates the need for you to travel to a workshop, saving you valuable time and minimizing disruption to your day. Equipped with all necessary tools, our mobile units can perform high-quality dent repairs on-site, ensuring your vehicle is restored quickly and efficiently.",
+      "icon": "Truck",
+      "category": "Convenience",
+      "features": [
+        "On-site repair at your location",
+        "Flexible scheduling",
+        "Fully equipped mobile units",
+        "Same-day service often available",
+        "No need to drop off/pick up vehicle"
+      ],
+      "benefits": [
+        "Maximum convenience and time-saving",
+        "Minimal disruption to your schedule",
+        "Professional repair without leaving home",
+        "Quick resolution of minor damages",
+        "Ideal for busy individuals and businesses"
+      ],
+      "pricing": {
+        "startingPrice": 120,
+        "currency": "GBP",
+        "billingPeriod": "per visit"
+      },
+      "deliverables": [
+        "On-site dent repair",
+        "Post-repair inspection",
+        "Digital payment options"
+      ],
+      "timeline": "1-4 hours",
+      "featured": false
+    },
+    {
+      "id": "fleet-pdr-solutions",
+      "title": "Fleet PDR Solutions",
+      "shortDescription": "Tailored dent repair and maintenance services for car fleets, dealerships, and leasing companies.",
+      "fullDescription": "We offer specialized PDR and Smart Repair solutions designed for businesses managing car fleets, including dealerships, leasing companies, and corporate vehicle pools. Our services help maintain the aesthetic condition and resale value of your fleet, reducing off-road time and repair costs. We provide flexible scheduling, bulk pricing options, and dedicated account management to ensure seamless service delivery and minimal operational impact.",
+      "icon": "Building",
+      "category": "B2B Solutions",
+      "features": [
+        "Volume-based pricing",
+        "Priority scheduling",
+        "Dedicated account manager",
+        "On-site fleet inspections",
+        "Customized maintenance plans"
+      ],
+      "benefits": [
+        "Significant cost savings for fleet maintenance",
+        "Reduced vehicle downtime",
+        "Preserves fleet value and appearance",
+        "Streamlined repair process",
+        "Reliable partnership for long-term care"
+      ],
+      "pricing": {
+        "startingPrice": 50,
+        "currency": "GBP",
+        "billingPeriod": "per vehicle/contract"
+      },
+      "deliverables": [
+        "Fleet condition reports",
+        "Scheduled repair services",
+        "Consolidated billing",
+        "Dedicated support channel"
+      ],
+      "timeline": "Ongoing contract",
+      "featured": true
+    },
+    {
+      "id": "insurance-claim-assistance",
+      "title": "Insurance Claim Assistance",
+      "shortDescription": "Support and guidance through the insurance claim process for vehicle damage repairs.",
+      "fullDescription": "Navigating insurance claims can be complex and time-consuming. We provide comprehensive assistance to help you manage your insurance claim for PDR and Smart Repair services. From initial damage assessment and documentation to direct communication with your insurer, we streamline the process to ensure a smooth, cashless repair experience. Our goal is to alleviate your stress and get your vehicle repaired quickly and efficiently.",
+      "icon": "FileText",
+      "category": "Support Services",
+      "features": [
+        "Damage assessment and reporting",
+        "Direct liaison with insurance companies",
+        "Assistance with paperwork",
+        "Cashless repair options",
+        "Expert advice on claim procedures"
+      ],
+      "benefits": [
+        "Hassle-free insurance claim experience",
+        "Faster claim approval and repair start",
+        "No upfront payment for covered repairs",
+        "Expert handling of all communication",
+        "Peace of mind during a stressful time"
+      ],
+      "pricing": {
+        "startingPrice": 0,
+        "currency": "GBP",
+        "billingPeriod": "included with repair"
+      },
+      "deliverables": [
+        "Claim documentation support",
+        "Insurance approval confirmation",
+        "Direct billing to insurer"
+      ],
+      "timeline": "Varies by claim",
+      "featured": false
+    }
+  ]
+}
+

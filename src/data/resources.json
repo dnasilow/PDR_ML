@@ -1,0 +1,174 @@
+{
+  "resources": [
+    {
+      "id": "pdr-technology-guide",
+      "title": "The Ultimate Guide to PDR Technology",
+      "description": "A comprehensive guide explaining Paintless Dent Repair (PDR) technology, its benefits, and how it preserves your vehicle's original finish. Includes FAQs and comparison with traditional repair methods.",
+      "type": "Guide",
+      "category": "PDR Technology",
+      "pages": 30,
+      "fileSize": "2.1 MB",
+      "format": "PDF",
+      "downloadCount": 3500,
+      "featured": true,
+      "publishedDate": "2024-01-20",
+      "lastUpdated": "2024-03-10",
+      "author": "Pawel Kowalski",
+      "downloadUrl": "/downloads/pdr-technology-guide.pdf",
+      "previewUrl": "/previews/pdr-technology-guide-preview.pdf",
+      "tags": ["PDR", "Technology", "Dent Repair", "Automotive"],
+      "chapters": [
+        "What is Paintless Dent Repair?",
+        "The Benefits of PDR",
+        "PDR vs. Traditional Bodywork",
+        "Common Types of Damage Repaired by PDR",
+        "Maintaining Your Vehicle's Value with PDR"
+      ],
+      "targetAudience": ["Car Owners", "Fleet Managers", "Insurance Adjusters"],
+      "prerequisites": "None",
+      "estimatedReadTime": "1-2 hours"
+    },
+    {
+      "id": "hail-damage-insurance-guide",
+      "title": "Navigating Hail Damage Insurance Claims",
+      "description": "An essential guide for vehicle owners and fleet managers on how to effectively manage insurance claims for hail damage. Covers documentation, assessment, and working with repair specialists.",
+      "type": "Guide",
+      "category": "Insurance & Claims",
+      "pages": 20,
+      "fileSize": "1.5 MB",
+      "format": "PDF",
+      "downloadCount": 2800,
+      "featured": true,
+      "publishedDate": "2024-02-15",
+      "lastUpdated": "2024-03-25",
+      "author": "Anna Nowak",
+      "downloadUrl": "/downloads/hail-damage-insurance-guide.pdf",
+      "previewUrl": "/previews/hail-damage-insurance-guide-preview.pdf",
+      "tags": ["Hail Damage", "Insurance", "Claims", "Vehicle Repair"],
+      "contents": [
+        "Understanding Your Policy",
+        "Steps to File a Claim",
+        "Damage Assessment and Documentation",
+        "Choosing a Repair Shop",
+        "What to Expect During Repair"
+      ],
+      "targetAudience": ["Car Owners", "Fleet Managers", "Leasing Companies"],
+      "prerequisites": "None",
+      "estimatedReadTime": "45-60 minutes"
+    },
+    {
+      "id": "fleet-maintenance-handbook",
+      "title": "Fleet Vehicle Cosmetic Maintenance Handbook",
+      "description": "A practical handbook for fleet managers and car dealerships on maintaining the cosmetic condition of their vehicle fleets using PDR and Smart Repair techniques. Focuses on cost-efficiency and value preservation.",
+      "type": "Handbook",
+      "category": "Fleet Management",
+      "pages": 45,
+      "fileSize": "2.8 MB",
+      "format": "PDF",
+      "downloadCount": 1900,
+      "featured": false,
+      "publishedDate": "2024-03-01",
+      "lastUpdated": "2024-04-05",
+      "author": "Tomasz Zielinski",
+      "downloadUrl": "/downloads/fleet-maintenance-handbook.pdf",
+      "previewUrl": "/previews/fleet-maintenance-handbook-preview.pdf",
+      "tags": ["Fleet", "Maintenance", "PDR", "Smart Repair", "Dealership"],
+      "chapters": [
+        "Importance of Cosmetic Maintenance",
+        "Integrating PDR into Fleet Management",
+        "Smart Repair for Common Fleet Damages",
+        "Cost-Benefit Analysis of PDR for Fleets",
+        "Setting Up a Proactive Maintenance Schedule"
+      ],
+      "targetAudience": ["Fleet Managers", "Car Dealerships", "Leasing Companies"],
+      "prerequisites": "Basic automotive knowledge",
+      "estimatedReadTime": "2-3 hours"
+    },
+    {
+      "id": "pdr-technician-training-insights",
+      "title": "PDR Technician Training Insights",
+      "description": "An overview of the skills, training, and continuous development required to become a certified PDR technician. Highlights the importance of expertise and precision in dent removal.",
+      "type": "Article",
+      "category": "Industry Insights",
+      "pages": 10,
+      "fileSize": "0.7 MB",
+      "format": "PDF",
+      "downloadCount": 1200,
+      "featured": false,
+      "publishedDate": "2024-03-15",
+      "lastUpdated": "2024-04-10",
+      "author": "Pawel Kowalski",
+      "downloadUrl": "/downloads/pdr-technician-training-insights.pdf",
+      "previewUrl": "/previews/pdr-technician-training-insights-preview.pdf",
+      "tags": ["PDR", "Training", "Technician", "Career"],
+      "sections": [
+        "The Path to Becoming a PDR Expert",
+        "Key Skills for PDR Technicians",
+        "Continuous Learning and Certification",
+        "International Competitions and Standards",
+        "The Future of PDR Profession"
+      ],
+      "targetAudience": ["Aspiring PDR Technicians", "Automotive Enthusiasts", "Industry Professionals"],
+      "prerequisites": "Interest in automotive repair",
+      "estimatedReadTime": "30 minutes"
+    }
+  ],
+  "webinars": [
+    {
+      "id": "pdr-for-dealerships",
+      "title": "Maximizing Profitability: PDR for Car Dealerships",
+      "description": "Learn how car dealerships can integrate PDR services to reduce reconditioning costs, speed up inventory turnover, and enhance customer satisfaction.",
+      "date": "2024-04-20",
+      "time": "10:00",
+      "timezone": "GMT",
+      "duration": 60,
+      "presenter": {
+        "name": "Pawel Kowalski",
+        "role": "Lead PDR Technician & Trainer",
+        "bio": "15+ years experience in advanced PDR and automotive repair."
+      },
+      "registrationCount": 250,
+      "maxCapacity": 300,
+      "registrationUrl": "/webinars/register/pdr-for-dealerships",
+      "topics": [
+        "PDR benefits for new and used car inventory",
+        "Streamlining reconditioning processes",
+        "Cost savings and ROI of in-house PDR",
+        "Customer satisfaction and retention strategies"
+      ],
+      "targetAudience": ["Dealership Owners", "General Managers", "Service Managers"],
+      "materials": ["Presentation slides", "ROI calculator template", "Best practices checklist"],
+      "recordingAvailable": false,
+      "featured": true
+    },
+    {
+      "id": "hail-damage-management",
+      "title": "Effective Hail Damage Management for Fleets",
+      "description": "A webinar for fleet managers on proactive strategies and efficient repair solutions for vehicles affected by hail, minimizing downtime and financial impact.",
+      "date": "2024-05-10",
+      "time": "14:00",
+      "timezone": "GMT",
+      "duration": 45,
+      "presenter": {
+        "name": "Anna Nowak",
+        "role": "Senior PDR Technician & Quality Manager",
+        "bio": "10+ years experience in PDR quality control and insurance claims."
+      },
+      "registrationCount": 180,
+      "maxCapacity": 200,
+      "registrationUrl": "/webinars/register/hail-damage-management",
+      "topics": [
+        "Pre-hail season preparation",
+        "Post-hail damage assessment",
+        "Insurance claim process optimization",
+        "Rapid PDR deployment for large fleets",
+        "Maintaining fleet value after hail"
+      ],
+      "targetAudience": ["Fleet Managers", "Insurance Professionals", "Logistics Coordinators"],
+      "materials": ["Checklist for hail damage response", "Case studies", "Q&A session"],
+      "recordingAvailable": false,
+      "featured": true
+    }
+  ]
+}
+

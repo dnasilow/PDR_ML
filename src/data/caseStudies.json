@@ -1,0 +1,185 @@
+{
+  "caseStudies": [
+    {
+      "id": "fleet-hail-damage-glasgow",
+      "title": "Fleet Hail Damage Restoration - Glasgow",
+      "client": "Glasgow Car Rentals Ltd.",
+      "industry": "Automotive Rental",
+      "location": "Glasgow",
+      "duration": "2 weeks",
+      "projectValue": 45000,
+      "teamSize": 5,
+      "challenge": "A sudden severe hailstorm caused extensive damage to over 50 vehicles in Glasgow Car Rentals' fleet, leading to significant downtime and potential revenue loss. Traditional body shop repairs were too slow and costly.",
+      "solution": "Our PDR Professional Team deployed a dedicated mobile unit to Glasgow Car Rentals' depot. Utilizing advanced PDR techniques, we meticulously removed all hail damage from the affected vehicles, restoring them to their original condition without the need for repainting. We also assisted with insurance claims documentation.",
+      "approach": [
+        "Rapid on-site damage assessment",
+        "Deployment of specialized PDR technicians and equipment",
+        "Efficient, high-volume dent removal using PDR",
+        "Comprehensive quality control checks",
+        "Assistance with insurance claim processing"
+      ],
+      "results": [
+        {
+          "metric": "Repair Time",
+          "value": "70% faster",
+          "description": "Compared to traditional body shop methods, significantly reducing vehicle downtime."
+        },
+        {
+          "metric": "Cost Savings",
+          "value": "40%",
+          "description": "Achieved substantial cost savings by avoiding repainting and filler."
+        },
+        {
+          "metric": "Vehicle Value Preservation",
+          "value": "100%",
+          "description": "Maintained original factory paintwork, preserving vehicle resale value."
+        },
+        {
+          "metric": "Client Satisfaction",
+          "value": "Excellent",
+          "description": "Client reported complete satisfaction with speed, quality, and service."
+        }
+      ],
+      "testimonial": {
+        "quote": "The PDR Professional Team saved our fleet! Their rapid response and exceptional quality of work meant our vehicles were back on the road much faster than we ever anticipated. Their support with the insurance claim was invaluable.",
+        "author": "David Campbell",
+        "role": "Fleet Manager",
+        "company": "Glasgow Car Rentals Ltd."
+      },
+      "deliverables": [
+        "Fully restored vehicle fleet",
+        "Detailed repair reports",
+        "Insurance claim support documentation"
+      ],
+      "technologies": ["Advanced PDR Tools", "Specialized Lighting", "Mobile Repair Units"],
+      "images": [
+        "/images/case-studies/fleet-hail-damage-glasgow-1.jpg",
+        "/images/case-studies/fleet-hail-damage-glasgow-2.jpg"
+      ],
+      "featured": true,
+      "publishedDate": "2024-03-10",
+      "tags": ["Fleet", "Hail Damage", "PDR", "Automotive Rental"]
+    },
+    {
+      "id": "showroom-dent-removal-edinburgh",
+      "title": "Showroom Vehicle Preparation - Edinburgh",
+      "client": "Edinburgh Luxury Motors",
+      "industry": "Automotive Dealership",
+      "location": "Edinburgh",
+      "duration": "3 days",
+      "projectValue": 8000,
+      "teamSize": 2,
+      "challenge": "Edinburgh Luxury Motors frequently receives new vehicles with minor transit dents or showroom imperfections that require immediate, high-quality repair before display. Traditional body shop methods were causing delays and additional costs.",
+      "solution": "We established a regular on-site PDR service for Edinburgh Luxury Motors. Our technicians visit weekly to address any new dents, ensuring all showroom vehicles are in pristine condition. This partnership guarantees quick turnaround and maintains the vehicles' original finish.",
+      "approach": [
+        "Scheduled on-site PDR service",
+        "Immediate repair of minor dents and dings",
+        "Preservation of original paintwork",
+        "Seamless integration with dealership operations",
+        "Focus on aesthetic perfection"
+      ],
+      "results": [
+        {
+          "metric": "Preparation Time",
+          "value": "50% reduction",
+          "description": "Significantly reduced the time required to prepare vehicles for the showroom floor."
+        },
+        {
+          "metric": "Cost Efficiency",
+          "value": "30% savings",
+          "description": "Lowered preparation costs compared to outsourcing to traditional body shops."
+        },
+        {
+          "metric": "Vehicle Presentation",
+          "value": "Flawless",
+          "description": "Ensured all vehicles presented to customers were in immaculate condition."
+        },
+        {
+          "metric": "Dealership Satisfaction",
+          "value": "High",
+          "description": "Client reported increased efficiency and satisfaction with vehicle readiness."
+        }
+      ],
+      "testimonial": {
+        "quote": "The PDR Professional Team is an indispensable partner for our dealership. Their on-site service is incredibly efficient, and the quality of their PDR work is simply unmatched. Our cars always look perfect for our customers.",
+        "author": "Mark Stewart",
+        "role": "General Manager",
+        "company": "Edinburgh Luxury Motors"
+      },
+      "deliverables": [
+        "Regular on-site PDR services",
+        "Pristine showroom vehicles",
+        "Streamlined vehicle preparation process"
+      ],
+      "technologies": ["Precision PDR Tools", "Specialized LED Lighting"],
+      "images": [
+        "/images/case-studies/showroom-dent-removal-edinburgh-1.jpg",
+        "/images/case-studies/showroom-dent-removal-edinburgh-2.jpg"
+      ],
+      "featured": true,
+      "publishedDate": "2024-02-20",
+      "tags": ["Dealership", "PDR", "Showroom", "Automotive"]
+    },
+    {
+      "id": "leasing-company-maintenance-aberdeen",
+      "title": "Leasing Fleet Maintenance - Aberdeen",
+      "client": "Aberdeen Leasing Solutions",
+      "industry": "Automotive Leasing",
+      "location": "Aberdeen",
+      "duration": "Ongoing contract",
+      "projectValue": 70000,
+      "teamSize": 3,
+      "challenge": "Aberdeen Leasing Solutions needed a reliable and cost-effective partner to manage minor bodywork damages on their returned lease vehicles. Maintaining high standards for vehicle condition was crucial for remarketing and customer satisfaction.",
+      "solution": "We entered into an ongoing contract to provide PDR and Smart Repair services for their returned lease vehicles. Our team conducts regular inspections and performs necessary repairs, ensuring vehicles meet high standards for their next lease or sale. This proactive approach minimizes end-of-lease charges and maximizes vehicle value.",
+      "approach": [
+        "Regular vehicle inspection and damage assessment",
+        "On-demand PDR and Smart Repair services",
+        "Efficient repair workflow to minimize vehicle downtime",
+        "Detailed reporting and transparent pricing",
+        "Dedicated account management for seamless service"
+      ],
+      "results": [
+        {
+          "metric": "Remarketing Value",
+          "value": "Increased by 15%",
+          "description": "Improved the average remarketing value of returned lease vehicles."
+        },
+        {
+          "metric": "Repair Costs",
+          "value": "Reduced by 35%",
+          "description": "Significant reduction in overall repair and reconditioning costs."
+        },
+        {
+          "metric": "Customer Satisfaction",
+          "value": "Improved",
+          "description": "Reduced disputes over end-of-lease damage charges, enhancing customer relations."
+        },
+        {
+          "metric": "Efficiency",
+          "value": "Streamlined",
+          "description": "Faster processing of returned vehicles, improving operational flow."
+        }
+      ],
+      "testimonial": {
+        "quote": "Our partnership with the PDR Professional Team has been a game-changer. Their efficient and high-quality repairs on our lease returns have not only saved us money but also significantly improved our customer satisfaction. Highly recommended!",
+        "author": "Sarah MacDonald",
+        "role": "Operations Director",
+        "company": "Aberdeen Leasing Solutions"
+      },
+      "deliverables": [
+        "Ongoing PDR and Smart Repair services",
+        "Regular vehicle condition reports",
+        "Optimized vehicle reconditioning process"
+      ],
+      "technologies": ["PDR Techniques", "Smart Repair Solutions", "Digital Damage Assessment"],
+      "images": [
+        "/images/case-studies/leasing-company-maintenance-aberdeen-1.jpg",
+        "/images/case-studies/leasing-company-maintenance-aberdeen-2.jpg"
+      ],
+      "featured": false,
+      "publishedDate": "2024-01-25",
+      "tags": ["Leasing", "Fleet", "PDR", "Smart Repair"]
+    }
+  ]
+}
+

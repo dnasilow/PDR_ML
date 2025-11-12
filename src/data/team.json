@@ -1,0 +1,141 @@
+{
+  "teamMembers": [
+    {
+      "id": "pawel-kowalski",
+      "name": "Pawel Kowalski",
+      "role": "Lead PDR Technician & Trainer",
+      "department": "Technical Operations",
+      "experience": "15+ years",
+      "specialisation": "Advanced PDR & Hail Damage Repair",
+      "email": "pawel.kowalski@pdrprofessional.co.uk",
+      "phone": "+44 7123 456789",
+      "linkedin": "https://linkedin.com/in/pawelkowalski",
+      "bio": "Pawel is a highly experienced PDR technician and trainer, with over 15 years in the industry. He has perfected the art of dent removal using both PDR and Smart Repair techniques, and is renowned for his expertise in complex hail damage repairs. Pawel actively participates in international PDR competitions, consistently achieving top results.",
+      "qualifications": [
+        "Certified Master PDR Technician (PDR Nation)",
+        "Advanced Smart Repair Certification",
+        "Automotive Body Repair & Paint Qualification"
+      ],
+      "achievements": [
+        "Winner, International PDR Competition 2023",
+        "Trained over 100 PDR technicians",
+        "Led thousands of successful dent repairs",
+        "Developed innovative PDR tool modifications"
+      ],
+      "expertise": [
+        "Paintless Dent Repair (PDR)",
+        "Smart Repair Techniques",
+        "Hail Damage Restoration",
+        "Crease & Complex Dent Removal",
+        "PDR Training & Mentorship"
+      ],
+      "languages": ["English", "Polish"],
+      "image": "/images/team/pawel-kowalski.jpg",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "anna-nowak",
+      "name": "Anna Nowak",
+      "role": "Senior PDR Technician & Quality Manager",
+      "department": "Quality Assurance",
+      "experience": "10+ years",
+      "specialisation": "Quality Control & Customer Satisfaction",
+      "email": "anna.nowak@pdrprofessional.co.uk",
+      "phone": "+44 7234 567890",
+      "linkedin": "https://linkedin.com/in/annanowak",
+      "bio": "Anna ensures every repair meets our stringent quality standards. With over a decade of PDR experience, she combines technical precision with an unwavering commitment to customer satisfaction. Anna is also adept at managing insurance claims, making the repair process seamless for clients.",
+      "qualifications": [
+        "Certified PDR Technician (Vale Training Solutions)",
+        "Automotive Quality Management Certification",
+        "Customer Service Excellence Award"
+      ],
+      "achievements": [
+        "Managed quality for 5000+ repairs",
+        "Instrumental in achieving 98% client satisfaction rate",
+        "Specialist in insurance claim liaison",
+        "Developed internal quality audit protocols"
+      ],
+      "expertise": [
+        "PDR Quality Control",
+        "Customer Relationship Management",
+        "Insurance Claim Processing",
+        "Advanced Dent Assessment",
+        "Process Optimization"
+      ],
+      "languages": ["English", "German"],
+      "image": "/images/team/anna-nowak.jpg",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": "tomasz-zielinski",
+      "name": "Tomasz Zielinski",
+      "role": "Mobile PDR Specialist",
+      "department": "Field Operations",
+      "experience": "8+ years",
+      "specialisation": "On-Site & Fleet PDR Services",
+      "email": "tomasz.zielinski@pdrprofessional.co.uk",
+      "phone": "+44 7345 678901",
+      "linkedin": "https://linkedin.com/in/tomaszzielinski",
+      "bio": "Tomasz is our go-to expert for mobile PDR services, bringing convenience and high-quality repairs directly to our clients. His efficiency and precision make him invaluable for fleet maintenance and on-site repairs, ensuring minimal disruption to business operations.",
+      "qualifications": [
+        "Certified PDR Technician (ARC PDR Training)",
+        "Mobile Automotive Repair Specialist",
+        "Fleet Maintenance Certification"
+      ],
+      "achievements": [
+        "Successfully completed 2000+ mobile repairs",
+        "Key contributor to fleet service expansion",
+        "Recognized for rapid response times",
+        "Developed efficient mobile workshop setups"
+      ],
+      "expertise": [
+        "Mobile PDR",
+        "Fleet Dent Repair",
+        "On-Site Damage Assessment",
+        "Time-Efficient Repair Solutions",
+        "Customer Convenience Services"
+      ],
+      "languages": ["English", "Spanish"],
+      "image": "/images/team/tomasz-zielinski.jpg",
+      "featured": true,
+      "order": 3
+    },
+    {
+      "id": "katarzyna-wojcik",
+      "name": "Katarzyna Wojcik",
+      "role": "Customer Relations & Logistics",
+      "department": "Administration",
+      "experience": "7+ years",
+      "specialisation": "Client Communication & Scheduling",
+      "email": "katarzyna.wojcik@pdrprofessional.co.uk",
+      "phone": "+44 7456 789012",
+      "linkedin": "https://linkedin.com/in/katarzynawojcik",
+      "bio": "Katarzyna is the friendly voice and organizational backbone of our team, ensuring smooth communication and efficient scheduling for all our clients. Her dedication to excellent contact and rapid response times makes the repair process stress-free.",
+      "qualifications": [
+        "Customer Service Professional Certification",
+        "Logistics & Operations Diploma",
+        "Automotive Administration Course"
+      ],
+      "achievements": [
+        "Maintained 100% client communication response rate",
+        "Optimized repair scheduling system",
+        "Key in managing 24/7 critical support line",
+        "Improved client feedback collection process"
+      ],
+      "expertise": [
+        "Customer Support",
+        "Scheduling & Coordination",
+        "Logistics Management",
+        "Client Relationship Management",
+        "Administrative Support"
+      ],
+      "languages": ["English", "French"],
+      "image": "/images/team/katarzyna-wojcik.jpg",
+      "featured": false,
+      "order": 4
+    }
+  ]
+}
+
