@@ -59,6 +59,3 @@ Modern design inspired by professional PDR industry standards with:
 - Professional typography and spacing
 - Orange (#f97316) accent color throughout
 
-## 📄 License
-
-© 2025 PDR Manus. All rights reserved.
