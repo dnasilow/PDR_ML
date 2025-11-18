@@ -9,13 +9,24 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 lg:py-32">
-      <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
-          <circle fill="#f97316" cx="200" cy="150" r="50" opacity="0.3" />
-          <circle fill="#f97316" cx="800" cy="400" r="80" opacity="0.3" />
-          <circle fill="#f97316" cx="1000" cy="200" r="60" opacity="0.3" />
-        </svg>
+    <section id="home" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 lg:py-32">
+      {/* Background Image Overlay */}
+      <div className="absolute inset-0 opacity-20">
+        <img 
+          src="/images/hero-pdr-background.jpg" 
+          alt="Professional PDR Service" 
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.target.style.display = 'none';
+            e.target.parentElement.innerHTML = `
+              <svg class="w-full h-full" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+                <circle fill="#f97316" cx="200" cy="150" r="50" opacity="0.3" />
+                <circle fill="#f97316" cx="800" cy="400" r="80" opacity="0.3" />
+                <circle fill="#f97316" cx="1000" cy="200" r="60" opacity="0.3" />
+              </svg>
+            `;
+          }}
+        />
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -66,11 +77,23 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="text-center">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-12 shadow-2xl">
-              <div className="text-orange-400 text-7xl font-bold mb-4">PDR</div>
-              <div className="text-2xl font-semibold mb-4">Paintless Dent Repair</div>
-              <div className="text-gray-200">Professional  Non-invasive  Cost-effective</div>
+          <div className="lg:order-2">
+            <div className="relative">
+              <img 
+                src="/images/pdr-tools.jpg" 
+                alt="Professional PDR Tools and Technique" 
+                className="rounded-lg shadow-2xl w-full h-auto"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.innerHTML = `
+                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-12 shadow-2xl">
+                      <div class="text-orange-400 text-7xl font-bold mb-4">PDR</div>
+                      <div class="text-2xl font-semibold mb-4">Paintless Dent Repair</div>
+                      <div class="text-gray-200">Professional • Non-invasive • Cost-effective</div>
+                    </div>
+                  `;
+                }}
+              />
             </div>
           </div>
         </div>

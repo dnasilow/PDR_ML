@@ -61,15 +61,30 @@ const Team = () => {
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="md:flex">
               {/* Image */}
-              <div className="md:w-2/5 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center p-12">
-                <div className="text-center">
-                  <div className="w-48 h-48 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <Car className="h-24 w-24 text-orange-500" />
-                  </div>
-                  <div className="text-white">
-                    <p className="text-sm font-semibold mb-2">Professional Photo Coming Soon</p>
-                  </div>
-                </div>
+              <div className="md:w-2/5 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center p-12 relative overflow-hidden">
+                <img 
+                  src="/images/maciej-linosz.jpg"
+                  alt="Maciej Linosz - Owner & Master PDR Technician"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    // Show fallback
+                    const fallback = document.createElement('div');
+                    fallback.className = 'text-center w-full';
+                    fallback.innerHTML = `
+                      <div class="w-48 h-48 bg-white rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <svg class="h-24 w-24 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                        </svg>
+                      </div>
+                      <div class="text-white">
+                        <p class="text-sm font-semibold mb-2">Add Professional Photo</p>
+                        <p class="text-xs opacity-80">Place image at: /public/images/maciej-linosz.jpg</p>
+                      </div>
+                    `;
+                    e.target.parentElement.appendChild(fallback);
+                  }}
+                />
               </div>
 
               {/* Content */}
