@@ -9,36 +9,28 @@ const Hero = () => {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24 lg:py-32">
-      {/* Background Image Overlay */}
-      <div className="absolute inset-0 opacity-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Luxury Car Background with Dark Overlay */}
+      <div className="absolute inset-0 z-0">
         <img 
-          src="/images/hero-pdr-background.jpg" 
-          alt="Professional PDR Service" 
+          src="/images/luxury-car-hero.jpg" 
+          alt="Luxury Vehicle" 
           className="w-full h-full object-cover"
-          onError={(e) => {
-            e.target.style.display = 'none';
-            e.target.parentElement.innerHTML = `
-              <svg class="w-full h-full" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
-                <circle fill="#f97316" cx="200" cy="150" r="50" opacity="0.3" />
-                <circle fill="#f97316" cx="800" cy="400" r="80" opacity="0.3" />
-                <circle fill="#f97316" cx="1000" cy="200" r="60" opacity="0.3" />
-              </svg>
-            `;
-          }}
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/60"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                Comprehensive Dent Removal<br />
-                <span className="text-orange-400">Without Painting</span>
+              <h1 className="text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Your Car, <span className="text-orange-500">Like New</span>
               </h1>
-              <p className="text-xl leading-relaxed text-gray-200">
-                We are leaders in non-invasive dent removal from car bodies, using advanced PDR and Smart Repair techniques to restore your vehicle to its original, factory shape.
+              <p className="text-xl text-gray-200">
+                Expert paintless dent repair across Scotland. Save time, save money, preserve your vehicle's original paintwork with our professional PDR techniques.
               </p>
             </div>
 
@@ -53,11 +45,11 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md text-lg font-medium inline-flex items-center justify-center transition-colors">
-                Get a Free Quote
+                Get Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a href="#services" className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-md text-lg font-medium inline-flex items-center justify-center transition-colors">
-                Our Services
+              <a href="#gallery" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-md text-lg font-medium inline-flex items-center justify-center transition-colors">
+                View Our Work
               </a>
             </div>
 
@@ -77,23 +69,21 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="lg:order-2">
-            <div className="relative">
+          {/* Right Column - PDR Work Image with UI Overlay */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-2xl">
+              {/* Larger, more visible photo */}
               <img 
-                src="/images/pdr-tools.jpg" 
-                alt="Professional PDR Tools and Technique" 
-                className="rounded-lg shadow-2xl w-full h-auto"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.parentElement.innerHTML = `
-                    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-12 shadow-2xl">
-                      <div class="text-orange-400 text-7xl font-bold mb-4">PDR</div>
-                      <div class="text-2xl font-semibold mb-4">Paintless Dent Repair</div>
-                      <div class="text-gray-200">Professional • Non-invasive • Cost-effective</div>
-                    </div>
-                  `;
-                }}
+                src="/images/Paintless-Dent-Repair.jpg" 
+                alt="PDR Technician at Work" 
+                className="rounded-xl shadow-2xl w-full h-[600px] object-cover"
               />
+              {/* Smaller, compact text overlay at bottom */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-orange-900/95 to-transparent rounded-b-xl p-6 text-center">
+                <div className="text-orange-300 text-4xl font-bold mb-2">PDR</div>
+                <div className="text-xl font-semibold text-white mb-1">Paintless Dent Repair</div>
+                <div className="text-gray-100 text-sm">Professional • Non-invasive • Cost-effective</div>
+              </div>
             </div>
           </div>
         </div>
