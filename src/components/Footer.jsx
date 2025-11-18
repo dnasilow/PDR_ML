@@ -55,35 +55,39 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
               <div className="flex items-center">
-                <div className="h-10 w-10 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">S</span>
+                <div className="h-10 w-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">DM</span>
                 </div>
                 <span className="ml-3 text-xl font-bold">
-                  Scotland Business Solutions
+                  Dent Master Aberdeenshire
                 </span>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                Scotland's leading provider of comprehensive business services. 
-                We deliver innovative solutions that drive growth, efficiency, 
-                and success for businesses across all sectors.
+                Expert Paintless Dent Repair services in Aberdeenshire. 
+                Over 15 years of European experience restoring vehicles to 
+                factory condition without repainting.
               </p>
             </div>
 
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-primary" />
-                <span className="text-gray-300">+44 131 123 4567</span>
+                <Phone className="h-5 w-5 text-orange-500" />
+                <a href="tel:+447763459923" className="text-gray-300 hover:text-white transition-colors">
+                  +44 7763459923
+                </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-primary" />
-                <span className="text-gray-300">info@scotlandbusiness.co.uk</span>
+                <Mail className="h-5 w-5 text-orange-500" />
+                <a href="mailto:Dent.Master.Aberdeenshire@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                  Dent.Master.Aberdeenshire@gmail.com
+                </a>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5" />
+                <MapPin className="h-5 w-5 text-orange-500 mt-0.5" />
                 <div className="text-gray-300">
-                  <div>123 Princes Street, Edinburgh EH2 4AD</div>
-                  <div>456 Buchanan Street, Glasgow G1 2FF</div>
+                  <div>Serving Aberdeenshire</div>
+                  <div>& Surrounding Areas</div>
                 </div>
               </div>
             </div>
@@ -92,13 +96,7 @@ const Footer = () => {
             <div className="space-y-3">
               <h4 className="font-semibold">Follow Us</h4>
               <div className="flex space-x-4">
-                <Button variant="ghost" size="sm" className="h-10 w-10 p-0 text-gray-300 hover:text-white hover:bg-primary">
-                  <Linkedin className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="sm" className="h-10 w-10 p-0 text-gray-300 hover:text-white hover:bg-primary">
-                  <Twitter className="h-5 w-5" />
-                </Button>
-                <Button variant="ghost" size="sm" className="h-10 w-10 p-0 text-gray-300 hover:text-white hover:bg-primary">
+                <Button variant="ghost" size="sm" className="h-10 w-10 p-0 text-gray-300 hover:text-white hover:bg-orange-500">
                   <Facebook className="h-5 w-5" />
                 </Button>
               </div>
@@ -185,7 +183,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-gray-300 text-sm">
-              © 2024 Scotland Business Solutions Ltd. All rights reserved.
+              © 2025 Dent Master Aberdeenshire. All rights reserved.
             </div>
 
             {/* Legal Links */}
@@ -204,24 +202,18 @@ const Footer = () => {
 
           {/* Additional Info */}
           <div className="mt-6 pt-6 border-t border-gray-800">
-            <div className="grid md:grid-cols-3 gap-6 text-sm text-gray-400">
+            <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-400">
               <div>
-                <h5 className="font-medium text-gray-300 mb-2">Company Registration</h5>
-                <p>Scotland Business Solutions Ltd</p>
-                <p>Company No: SC123456</p>
-                <p>VAT No: GB123456789</p>
-              </div>
-              <div>
-                <h5 className="font-medium text-gray-300 mb-2">Professional Bodies</h5>
-                <p>Institute of Chartered Accountants of Scotland</p>
-                <p>Chartered Institute of Personnel and Development</p>
-                <p>Law Society of Scotland</p>
+                <h5 className="font-medium text-gray-300 mb-2">Business Information</h5>
+                <p>Dent Master Aberdeenshire</p>
+                <p>Owner: Maciej Linosz</p>
+                <p>Est. 2025</p>
               </div>
               <div>
                 <h5 className="font-medium text-gray-300 mb-2">Certifications</h5>
-                <p>ISO 9001:2015 Quality Management</p>
-                <p>ISO 27001:2013 Information Security</p>
-                <p>Investors in People Gold Standard</p>
+                <p>Certified Master PDR Technician</p>
+                <p>European PDR Training & Certification</p>
+                <p>15+ Years Experience</p>
               </div>
             </div>
           </div>

@@ -14,22 +14,22 @@ const About = () => {
     {
       icon: Star,
       title: 'Excellence',
-      description: 'We strive for excellence in every repair, delivering flawless results that restore your vehicle\'s original condition.'
+      description: 'I strive for excellence in every repair, delivering flawless results that restore your vehicle to its original condition.'
     },
     {
       icon: Heart,
       title: 'Integrity',
-      description: 'We conduct business with complete honesty and transparency, building trust through clear communication and ethical practices.'
+      description: 'I conduct business with complete honesty and transparency, building trust through clear communication and ethical service.'
     },
     {
       icon: Users,
-      title: 'Partnership',
-      description: 'We believe in building long-term relationships with our clients, working collaboratively to achieve mutual success and satisfaction.'
+      title: 'Personal Service',
+      description: 'You work directly with me - no middlemen. I take personal responsibility for every repair and customer relationship.'
     },
     {
       icon: Award,
-      title: 'Innovation',
-      description: 'We constantly seek new solutions and tools in paintless repair to continuously improve our services and deliver cutting-edge results.'
+      title: 'Craftsmanship',
+      description: 'With 15+ years of European training, I bring master-level PDR techniques to every vehicle I repair.'
     }
   ];
 
@@ -37,14 +37,14 @@ const About = () => {
     { number: '1000s+', label: 'Repairs Completed' },
     { number: '15+', label: 'Years of Experience' },
     { number: '99%', label: 'Client Satisfaction' },
-    { number: 'Certified', label: 'PDR Technicians' }
+    { number: '100%', label: 'Expert Craftsmanship' }
   ];
 
   const certifications = [
-    'Certified Master PDR Technicians (PDR Nation)',
-    'Advanced Smart Repair Certification',
-    'International PDR Competition Winners',
-    'Automotive Body Repair & Paint Qualification'
+    'Certified Master PDR Technician',
+    'Extensive European PDR Training',
+    'Specialist in Paintless Dent Removal',
+    'Expert in Hail Damage Repair'
   ];
 
   return (
@@ -53,11 +53,11 @@ const About = () => {
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-            About PDR Professional Team
+            About Dent Master Aberdeenshire
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are leaders in the automotive market for non-invasive dent removal, 
-            dedicated to reducing car repair costs and restoring vehicles to perfection.
+            Expert Paintless Dent Repair services delivered by Maciej Linosz, 
+            a master craftsman with over 15 years of European PDR experience.
           </p>
         </div>
 
@@ -66,25 +66,27 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-gray-900">
-                Our Story & Mission
+                My Story & Mission
               </h3>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  The PDR Professional Team was founded with a clear vision: to revolutionize 
-                  automotive body repair by specializing in Paintless Dent Repair (PDR) and 
-                  Smart Repair techniques. We are passionate about restoring vehicles to their 
-                  original, factory condition without compromising the paintwork.
+                  I'm Maciej Linosz, founder and owner of Dent Master Aberdeenshire. With over 
+                  15 years of specialized experience in Paintless Dent Repair (PDR), I've dedicated 
+                  my career to mastering the art of restoring vehicles to their original, factory 
+                  condition without compromising the paintwork.
                 </p>
                 <p>
-                  Our journey has been marked by continuous dedication to mastering the art of 
-                  dent removal. We meticulously monitor industry advancements, actively participate 
-                  in international competitions, and constantly seek innovative solutions to 
-                  enhance our services and deliver unparalleled quality.
+                  My journey began in Europe, where I trained extensively in advanced PDR techniques 
+                  and honed my skills on thousands of vehicles. I've worked with passenger cars, 
+                  vans, SUVs, and Jeeps - handling everything from minor dings to complex hail 
+                  damage repairs. Each repair is a testament to precision craftsmanship and 
+                  attention to detail.
                 </p>
                 <p>
-                  Today, we are recognized as a leading team in Poland, striving to expand our 
-                  expertise and become a leader in the Western European market. Our commitment 
-                  to precision, efficiency, and customer satisfaction drives every repair we undertake.
+                  Now serving the Aberdeenshire community, I bring European expertise and a personal 
+                  commitment to quality. When you choose Dent Master Aberdeenshire, you're working 
+                  directly with an experienced professional who takes pride in every repair and 
+                  stands behind the work with a personal guarantee.
                 </p>
               </div>
             </div>
@@ -92,7 +94,7 @@ const About = () => {
             {/* Certifications */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-gray-900">
-                Certifications & Expertise
+                My Expertise
               </h4>
               <div className="space-y-2">
                 {certifications.map((cert, index) => (
@@ -125,31 +127,31 @@ const About = () => {
 
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                Why Choose PDR Professional Team?
+                Why Choose Dent Master Aberdeenshire?
               </h4>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">
-                    Unmatched expertise in Paintless Dent Repair and Smart Repair techniques.
+                    15+ years of specialized European PDR experience and training.
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">
-                    Preservation of original factory paintwork, maintaining vehicle value.
+                    Preservation of original factory paintwork, maintaining your vehicle's value.
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">
-                    Efficient, cost-effective repairs with minimal vehicle downtime.
+                    Personal service - work directly with an experienced master craftsman.
                   </span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <CheckCircle className="h-5 w-5 text-orange-500 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700">
-                    Dedicated support for insurance claims and fleet management.
+                    Cost-effective repairs with quick turnaround and minimal vehicle downtime.
                   </span>
                 </li>
               </ul>
@@ -161,10 +163,10 @@ const About = () => {
         <div className="space-y-12">
           <div className="text-center">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-              Our Core Values
+              My Core Values
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
-              These values guide every repair and interaction, ensuring the highest standards of service.
+              These values guide every repair and customer interaction, ensuring the highest standards of service.
             </p>
           </div>
 
@@ -193,7 +195,7 @@ const About = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <Button className="bg-orange-500 hover:bg-orange-600 text-white" size="lg">
-            Learn More About Our Expertise
+            Get Your Free Quote Today
           </Button>
         </div>
       </div>

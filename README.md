@@ -1,4 +1,4 @@
-# PDR Manus - Professional Paintless Dent Repair Website
+# Dent Master Aberdeenshire - Professional Paintless Dent Repair Website
 
 A modern, responsive website for a Scottish automotive repair business specializing in PDR (Paintless Dent Repair) and Smart Repair services.
 
@@ -61,4 +61,4 @@ Modern design inspired by professional PDR industry standards with:
 
 ## 📄 License
 
-© 2025 PDR Manus. All rights reserved.
+© 2025 Dent Master Aberdeenshire. All rights reserved.

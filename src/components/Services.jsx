@@ -1,49 +1,55 @@
 import React from 'react';
-import { Car, CloudRain, Wrench, Truck, Building, FileText, ArrowRight } from 'lucide-react';
+import { Crosshair, CloudRain, Car, Wrench, Users, Shield, ArrowRight } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
       id: 1,
-      title: 'Paintless Dent Repair (PDR)',
-      description: 'Non-invasive removal of dents, dings, and creases from car bodies without painting.',
-      icon: Car,
-      features: ['Preserves original paintwork', 'Faster repair times', 'Cost-effective solution', 'Maintains vehicle value']
+      title: 'Minor Dents & Dings',
+      description: 'Expert removal of small dents and dings from parking lot incidents, shopping cart impacts, and everyday mishaps.',
+      icon: Crosshair,
+      features: ['Paintless repair method', 'Quick turnaround time', 'Preserves factory finish', 'No repainting needed'],
+      vehicles: ['Cars', 'Vans', 'SUVs', 'Jeeps']
     },
     {
       id: 2,
       title: 'Hail Damage Repair',
-      description: 'Expert repair of vehicles damaged by hail, restoring them to pre-damage condition using PDR.',
+      description: 'Specialized repair for both small and large hail damage across your vehicle\'s body panels.',
       icon: CloudRain,
-      features: ['Comprehensive assessment', 'Advanced PDR techniques', 'Insurance claim assistance', 'Guaranteed quality']
+      features: ['Comprehensive damage assessment', 'Advanced PDR techniques', 'Insurance documentation support', 'Complete restoration'],
+      vehicles: ['All vehicle types']
     },
     {
       id: 3,
-      title: 'Mobile PDR Service',
-      description: 'Convenient on-site dent repair at your home or workplace, minimizing disruption.',
-      icon: Truck,
-      features: ['On-site repair at your location', 'Flexible scheduling', 'Fully equipped mobile units', 'Same-day service']
+      title: 'Parking Damage',
+      description: 'Fix dents and damage from tight parking spaces, car doors, and parking lot accidents.',
+      icon: Car,
+      features: ['Door dings and dents', 'Panel damage repair', 'Bumper and fender work', 'Same-day service available'],
+      vehicles: ['Cars', 'Vans', 'SUVs', 'Jeeps']
     },
     {
       id: 4,
-      title: 'Smart Repair Techniques',
-      description: 'Specialized small to medium area repair techniques for various cosmetic damages.',
+      title: 'Kick & Impact Damage',
+      description: 'Repair damage from kicks, impacts, and other forceful contact to vehicle body panels.',
       icon: Wrench,
-      features: ['Minor paint scratch repair', 'Bumper scuff removal', 'Alloy wheel refurbishment', 'Fast turnaround']
+      features: ['Impact dent removal', 'Panel restoration', 'Maintains paint integrity', 'Professional finish'],
+      vehicles: ['All vehicle types']
     },
     {
       id: 5,
-      title: 'Fleet PDR Solutions',
-      description: 'Tailored dent repair and maintenance services for car fleets, dealerships, and leasing companies.',
-      icon: Building,
-      features: ['Volume-based pricing', 'Priority scheduling', 'Dedicated account manager', 'Reduced downtime']
+      title: 'Collision & Scrape Repair',
+      description: 'Light cosmetic damage repair from minor collisions, scrapes, and contact with objects.',
+      icon: Shield,
+      features: ['Minor collision damage', 'Scrape and scuff repair', 'Cosmetic restoration', 'Cost-effective solution'],
+      vehicles: ['Cars', 'Vans', 'SUVs', 'Jeeps']
     },
     {
       id: 6,
-      title: 'Insurance Claim Assistance',
-      description: 'Support and guidance through the insurance claim process for vehicle damage repairs.',
-      icon: FileText,
-      features: ['Damage assessment and reporting', 'Direct liaison with insurers', 'Cashless repair options', 'Expert advice']
+      title: 'Fleet & Commercial',
+      description: 'Specialized PDR services for business fleets, rental companies, and dealerships.',
+      icon: Users,
+      features: ['Volume discounts available', 'Priority scheduling', 'Minimize vehicle downtime', 'Professional service'],
+      vehicles: ['All commercial vehicles']
     }
   ];
 
@@ -52,10 +58,11 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Our Comprehensive PDR Services
+            Professional PDR Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer a full range of Paintless Dent Repair (PDR) and Smart Repair services, designed to restore your vehicle's appearance and value with precision and efficiency.
+            Using the advanced PDR (Paintless Dent Removal) system, I repair vehicle damage without 
+            repainting - preserving your vehicle's original factory finish and value.
           </p>
         </div>
         
@@ -72,15 +79,50 @@ const Services = () => {
                   {service.description}
                 </p>
                 {service.features && (
-                  <ul className="text-sm text-gray-600 space-y-2">
+                  <ul className="text-sm text-gray-600 space-y-2 mb-4">
                     {service.features.map((feature, idx) => (
                       <li key={idx}>• {feature}</li>
                     ))}
                   </ul>
                 )}
+                {service.vehicles && (
+                  <div className="text-xs text-gray-500 font-semibold mt-4 pt-4 border-t border-gray-200">
+                    Suitable for: {service.vehicles.join(' • ')}
+                  </div>
+                )}
               </div>
             );
           })}
+        </div>
+
+        <div className="mt-16 bg-orange-50 rounded-lg p-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            What is PDR (Paintless Dent Removal)?
+          </h3>
+          <p className="text-gray-700 max-w-3xl mx-auto mb-6">
+            PDR is an advanced repair technique that removes dents and dings without damaging your vehicle's 
+            original paint. Using specialized tools, I carefully massage the metal back to its original shape 
+            from behind the panel. This method is faster, more cost-effective than traditional body shop repairs, 
+            and maintains your vehicle's factory finish and resale value.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-700">
+            <span className="flex items-center">
+              <span className="h-2 w-2 bg-orange-500 rounded-full mr-2"></span>
+              No Repainting
+            </span>
+            <span className="flex items-center">
+              <span className="h-2 w-2 bg-orange-500 rounded-full mr-2"></span>
+              Factory Finish Preserved
+            </span>
+            <span className="flex items-center">
+              <span className="h-2 w-2 bg-orange-500 rounded-full mr-2"></span>
+              Quick Turnaround
+            </span>
+            <span className="flex items-center">
+              <span className="h-2 w-2 bg-orange-500 rounded-full mr-2"></span>
+              Cost-Effective
+            </span>
+          </div>
         </div>
       </div>
     </section>

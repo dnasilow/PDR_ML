@@ -21,6 +21,9 @@ const Contact = () => {
     damageDescription: '',
     privacyConsent: false,
   });
+  
+  const [uploadedImages, setUploadedImages] = useState([]);
+  const [isUploading, setIsUploading] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -30,38 +33,147 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  // Upload images to Cloudinary (free tier: 25GB storage, 25GB bandwidth/month)
+  const handleImageUpload = async (e) => {
+    const files = Array.from(e.target.files);
+    if (files.length === 0) return;
+
+    setIsUploading(true);
+    const uploadedUrls = [];
+
+    try {
+      for (const file of files) {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', 'pdr_quotes'); // Must match preset name you created
+        formData.append('folder', 'pdr_quote_media'); // Your folder name
+
+        // Upload to Cloudinary with your cloud name
+        const response = await fetch('https://api.cloudinary.com/v1_1/dl1oyyiun/image/upload', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const data = await response.json();
+        if (data.secure_url) {
+          uploadedUrls.push({
+            url: data.secure_url,
+            thumbnail: data.thumbnail_url || data.secure_url,
+            public_id: data.public_id
+          });
+        }
+      }
+
+      setUploadedImages([...uploadedImages, ...uploadedUrls]);
+      alert(`${uploadedUrls.length} image(s) uploaded successfully!`);
+    } catch (error) {
+      console.error('Error uploading images:', error);
+      alert('Error uploading images. Please try again or email them directly to Dent.Master.Aberdeenshire@gmail.com');
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission, e.g., send data to an API
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will get back to you within 24 hours.');
-    // Reset form or show success message
+    
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.damageDescription) {
+      alert('Please fill in all required fields (Name, Email, and Damage Description).');
+      return;
+    }
+
+    if (!formData.privacyConsent) {
+      alert('Please accept the privacy policy to continue.');
+      return;
+    }
+
+    // Send to Formspree with file upload support
+    try {
+      const form = e.target;
+      const formDataToSend = new FormData();
+      
+      // Add text fields manually to ensure they're captured
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone || 'Not provided');
+      formDataToSend.append('city', formData.city || 'Not provided');
+      formDataToSend.append('carDetails', formData.carDetails || 'Not provided');
+      formDataToSend.append('damageDescription', formData.damageDescription);
+      
+      // Add image URLs if any were uploaded
+      if (uploadedImages.length > 0) {
+        const imageLinks = uploadedImages.map((img, idx) => 
+          `Image ${idx + 1}: ${img.url}`
+        ).join('\n\n');
+        formDataToSend.append('photoLinks', imageLinks);
+      }
+      
+      // Add custom fields for Formspree
+      formDataToSend.append('_replyto', formData.email);
+      formDataToSend.append('_subject', `New PDR Quote Request from ${formData.name}`);
+      formDataToSend.append('_next', 'https://localhost:5173/#contact'); // Prevent redirect, return JSON instead
+
+      const response = await fetch('https://formspree.io/f/xblqjwno', {
+        method: 'POST',
+        body: formDataToSend,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      console.log('Formspree response status:', response.status);
+
+      if (response.ok) {
+        alert('Thank you for your inquiry! I will get back to you within 24 hours.');
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          carDetails: '',
+          city: '',
+          damageDescription: '',
+          privacyConsent: false,
+        });
+        setUploadedImages([]);
+        form.reset();
+      } else {
+        const errorText = await response.text();
+        console.error('Formspree error:', response.status, errorText);
+        throw new Error(`Submission failed: ${response.status}`);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      console.error('Error details:', error.message);
+      alert('There was an error sending your request. Please email directly at Dent.Master.Aberdeenshire@gmail.com or call +44 7763459923');
+    }
   };
 
   const contactInfo = [
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+44 7123 456789'], // Example number
-      description: 'Available 24/7 for critical situations, otherwise Mon-Fri 9:00 AM - 6:00 PM'
+      details: ['+44 7763459923'],
+      description: 'Available Mon-Sat 9:00 AM - 6:00 PM'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@pdrprofessional.co.uk'],
+      details: ['Dent.Master.Aberdeenshire@gmail.com'],
       description: 'We respond to all inquiries within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Service Area',
-      details: ['Mobile service across Scotland'],
-      description: 'Our technicians are strategically located for rapid response'
+      details: ['Aberdeenshire & Surrounding Areas'],
+      description: 'Mobile service available across the region'
     },
     {
       icon: Clock,
-      title: 'Emergency Service',
-      details: ['24/7 Availability'],
-      description: 'For critical situations, we operate around the clock'
+      title: 'Business Hours',
+      details: ['Mon-Sat: 9AM - 6PM'],
+      description: 'Flexible scheduling available'
     }
   ];
 
@@ -74,8 +186,8 @@ const Contact = () => {
             Get a Free PDR Quote
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have a dent? Send us your details and photos for a quick, no-obligation estimate. 
-            Our team will get back to you within 24 hours.
+            Have a dent? Send your details and photos for a quick, no-obligation estimate. 
+            I'll get back to you within 24 hours.
           </p>
         </div>
 
@@ -188,10 +300,10 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 p-4 bg-orange-50 border border-orange-200 rounded-lg">
                 <label htmlFor="photos" className="text-sm font-medium text-gray-900 flex items-center">
                   <Camera className="h-4 w-4 mr-2" />
-                  Attach Photos of Damage (Optional)
+                  Upload Photos of Damage (Optional)
                 </label>
                 <input
                   type="file"
@@ -199,9 +311,29 @@ const Contact = () => {
                   name="photos"
                   accept="image/*"
                   multiple
-                  className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-50 file:text-orange-700 hover:file:bg-orange-100"
+                  onChange={handleImageUpload}
+                  disabled={isUploading}
+                  className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-orange-100 file:text-orange-700 hover:file:bg-orange-200 disabled:opacity-50"
                 />
-                <p className="text-xs text-gray-500">For each dent, please take several photos from different angles.</p>
+                <p className="text-xs text-gray-600">
+                  {isUploading ? '⏳ Uploading to Cloudinary...' : 'Photos uploaded to Cloudinary (free & secure). Links will be sent in the email.'}
+                </p>
+                {uploadedImages.length > 0 && (
+                  <div className="mt-2 space-y-1">
+                    <p className="text-xs font-semibold text-green-700">✓ {uploadedImages.length} image(s) uploaded to Cloudinary</p>
+                    {uploadedImages.map((img, idx) => (
+                      <a 
+                        key={idx} 
+                        href={img.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block text-xs text-blue-600 hover:text-blue-800 truncate"
+                      >
+                        Image {idx + 1}: Click to view
+                      </a>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <div className="flex items-start space-x-3">

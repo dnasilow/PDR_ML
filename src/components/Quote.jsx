@@ -38,7 +38,7 @@ const Quote = () => {
             className="space-y-6"
           >
             {/* Hidden fields for Formspree */}
-            <input type="hidden" name="_to" value="dent.master.aberdeenshire@gmail.com" />
+            <input type="hidden" name="_to" value="Dent.Master.Aberdeenshire@gmail.com" />
             <input type="hidden" name="_subject" value="New PDR Quote Request from Dent Master Aberdeenshire Website" />
 
             {/* Personal Information */}

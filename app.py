@@ -14,7 +14,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 SENDER_EMAIL = "noreply.dent.master@gmail.com"  # This would be your sending email
 SENDER_PASSWORD = os.environ.get('EMAIL_PASSWORD', '')  # Set via environment variable
-RECIPIENT_EMAIL = "dent.master.aberdeenshire@gmail.com"
+RECIPIENT_EMAIL = "Dent.Master.Aberdeenshire@gmail.com"
 
 @app.route('/', methods=['GET'])
 def home():
