@@ -1,16 +1,17 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, Facebook, Instagram, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#services', label: 'Services' },
-    { href: '#about', label: 'About' },
-    { href: '#case-studies', label: 'Case Studies' },
-    { href: '#team', label: 'Our Team' },
-    { href: '#contact', label: 'Contact' },
+    { to: '/', label: 'Home' },
+    { to: '/services', label: 'Services' },
+    { to: '/about', label: 'About' },
+    { to: '/gallery', label: 'Gallery' },
+    { to: '/team', label: 'Our Team' },
+    { to: '/contact', label: 'Contact' },
   ];
 
   const handleLinkClick = () => {
@@ -23,28 +24,28 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo/Brand */}
           <div className="flex items-center">
-            <a href="#home" className="text-2xl font-bold text-gray-900">
+            <Link to="/" className="text-2xl font-bold text-gray-900">
               Dent Master <span className="text-orange-500">Aberdeenshire</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <Link
+                key={link.to}
+                to={link.to}
                 className="text-gray-700 hover:text-orange-600 transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md transition-colors"
             >
               Get a Quote
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -62,22 +63,22 @@ const Header = () => {
           <nav className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
+                <Link
+                  key={link.to}
+                  to={link.to}
                   onClick={handleLinkClick}
                   className="text-gray-700 hover:text-orange-600 transition-colors py-2"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 onClick={handleLinkClick}
                 className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md transition-colors text-center"
               >
                 Get a Quote
-              </a>
+              </Link>
               <div className="pt-4 border-t border-gray-200">
                 <div className="space-y-2 text-sm text-gray-600">
                   <a href="tel:+447763459923" className="flex items-center hover:text-orange-600">

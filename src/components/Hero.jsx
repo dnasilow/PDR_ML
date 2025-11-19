@@ -1,4 +1,5 @@
 ﻿import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const benefits = [
@@ -44,13 +45,13 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md text-lg font-medium inline-flex items-center justify-center transition-colors">
+              <Link to="/contact" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md text-lg font-medium inline-flex items-center justify-center transition-colors">
                 Get Free Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a href="#gallery" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-md text-lg font-medium inline-flex items-center justify-center transition-colors">
+              </Link>
+              <Link to="/gallery" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-md text-lg font-medium inline-flex items-center justify-center transition-colors">
                 View Our Work
-              </a>
+              </Link>
             </div>
 
             <div className="pt-8 grid grid-cols-3 gap-6">
