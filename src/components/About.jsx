@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button.jsx';
 import {
   Award,
@@ -194,9 +195,11 @@ const About = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white" size="lg">
-            Get Your Free Quote Today
-          </Button>
+          <Link to="/contact">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white" size="lg">
+              Get Your Free Quote Today
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
