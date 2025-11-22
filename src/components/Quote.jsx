@@ -92,22 +92,26 @@ const Quote = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen bg-gray-50 py-12 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
+        {/* Back to Home - Top Left */}
+        <div className="mb-8">
           <Link 
             to="/"
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 mb-6"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
+        </div>
+
+        {/* Header */}
+        <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Get Your Free PDR Quote
           </h1>
           <p className="text-xl text-gray-600">
-            Professional paintless dent repair assessment with no obligation.
+            Submit photos and videos of your vehicle damage and we'll provide a detailed quote within 24 hours
           </p>
         </div>
 
