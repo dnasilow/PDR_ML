@@ -86,12 +86,17 @@ const Footer = () => {
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-orange-500 mt-0.5" />
-                <div className="text-gray-300">
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=92+Charlotte+St+Fraserburgh+AB43+9JH+Scotland+UK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   <div>92 Charlotte St</div>
                   <div>Fraserburgh</div>
                   <div>AB43 9JH</div>
                   <div className="mt-1 text-sm">Scotland, UK</div>
-                </div>
+                </a>
               </div>
             </div>
 
