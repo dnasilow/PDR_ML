@@ -415,6 +415,34 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
+            {/* Google Maps Integration */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <MapPin className="h-6 w-6 text-orange-500 mr-3" />
+                  <div>
+                    <h4 className="font-semibold text-gray-900">Our Location</h4>
+                    <p className="text-sm text-gray-600">92 Charlotte St, Fraserburgh, AB43 9JH</p>
+                  </div>
+                </div>
+                <div className="relative w-full h-80 rounded-lg overflow-hidden border border-gray-200">
+                  <iframe
+                    title="Dent Master Aberdeenshire Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2153.9362842742946!2d-2.007373!3d57.691900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4884179c8b0c0b0b%3A0x0!2s92%20Charlotte%20St%2C%20Fraserburgh%20AB43%209JH!5e0!3m2!1sen!2suk!4v1234567890"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <p className="text-sm text-gray-600 mt-4">
+                  <strong>Mobile Service Available:</strong> We come to you! Serving Fraserburgh and surrounding areas within a 1-hour radius.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

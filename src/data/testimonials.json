@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Mitchell",
+    "location": "Fraserburgh",
+    "rating": 5,
+    "text": "Absolutely brilliant service! Maciej fixed a nasty dent on my BMW's door and you can't even tell it was there. Professional, quick, and very reasonably priced. Highly recommend!",
+    "vehicle": "BMW 3 Series",
+    "date": "2024-10"
+  },
+  {
+    "id": 2,
+    "name": "James Robertson",
+    "location": "Peterhead",
+    "rating": 5,
+    "text": "Had hail damage across the bonnet and roof of my Audi. The PDR work was exceptional - looks brand new again. Saved me thousands compared to traditional bodywork. Can't thank them enough!",
+    "vehicle": "Audi A4",
+    "date": "2024-09"
+  },
+  {
+    "id": 3,
+    "name": "Emma Thompson",
+    "location": "Banff",
+    "rating": 5,
+    "text": "Mobile service was so convenient! They came to my work car park and fixed multiple door dings while I was in the office. Professional, friendly, and the results are perfect.",
+    "vehicle": "Mercedes C-Class",
+    "date": "2024-11"
+  },
+  {
+    "id": 4,
+    "name": "David Campbell",
+    "location": "Aberdeen",
+    "rating": 5,
+    "text": "Superb craftsmanship! My Range Rover had a large dent from a car park incident. Maciej's attention to detail and skill is outstanding. The vehicle looks as good as new.",
+    "vehicle": "Range Rover Sport",
+    "date": "2024-08"
+  },
+  {
+    "id": 5,
+    "name": "Linda Stewart",
+    "location": "Ellon",
+    "rating": 5,
+    "text": "Very impressed with the service from start to finish. Quick quote, convenient mobile service, and excellent results. The dent on my car is completely gone. Would definitely use again!",
+    "vehicle": "Volkswagen Golf",
+    "date": "2024-10"
+  },
+  {
+    "id": 6,
+    "name": "Michael Fraser",
+    "location": "Fraserburgh",
+    "rating": 5,
+    "text": "Expert PDR service! Had several small dents and dings removed from my work van. Great value for money and the quality of work is exceptional. Very happy customer!",
+    "vehicle": "Ford Transit",
+    "date": "2024-09"
+  }
+]
