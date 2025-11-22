@@ -78,12 +78,11 @@ const Quote = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Request Your Quote</h2>
           
           <form 
-            action="https://formspree.io/f/xdkoqpzq" 
+            action="https://formspree.io/f/xblqjwno" 
             method="POST"
             className="space-y-6"
           >
             {/* Hidden fields for Formspree */}
-            <input type="hidden" name="_to" value="Dent.Master.Aberdeenshire@gmail.com" />
             <input type="hidden" name="_subject" value="New PDR Quote Request from Dent Master Aberdeenshire Website" />
 
             {/* Personal Information */}
