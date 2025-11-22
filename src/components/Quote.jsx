@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button.jsx';
 import {
   Phone,
@@ -95,13 +96,13 @@ const Quote = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <button 
-            onClick={() => window.location.hash = ''}
+          <Link 
+            to="/"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 mb-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
-          </button>
+          </Link>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Get Your Free PDR Quote
           </h1>

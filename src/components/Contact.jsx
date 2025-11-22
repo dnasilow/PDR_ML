@@ -196,7 +196,7 @@ const Contact = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold text-gray-900">
-                Request a Valuation
+                Request Your Free Quote
               </h3>
               <p className="text-gray-700">
                 Please fill out the form below. For accurate pricing, attach several photos of the damage from different angles.
