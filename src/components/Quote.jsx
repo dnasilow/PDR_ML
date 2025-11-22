@@ -6,12 +6,15 @@ import {
   MapPin,
   Send,
   ArrowLeft,
-  Camera
+  Camera,
+  CheckCircle
 } from 'lucide-react';
 
 const Quote = () => {
   const [uploadedImages, setUploadedImages] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   // Upload images/videos to Cloudinary (free tier: 25GB storage, 25GB bandwidth/month)
   const handleImageUpload = async (e) => {
@@ -54,6 +57,39 @@ const Quote = () => {
     }
   };
 
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch('https://formspree.io/f/xblqjwno', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setSubmitSuccess(true);
+        e.target.reset();
+        setUploadedImages([]);
+        // Scroll to top to show success message
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert('There was a problem submitting your request. Please try again or contact us directly.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was a problem submitting your request. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,16 +110,51 @@ const Quote = () => {
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Request Your Quote</h2>
-          
-          <form 
-            action="https://formspree.io/f/xblqjwno" 
-            method="POST"
-            className="space-y-6"
-          >
-            {/* Hidden fields for Formspree */}
-            <input type="hidden" name="_subject" value="New PDR Quote Request from Dent Master Aberdeenshire Website" />
+        {/* Success Message */}
+        {submitSuccess && (
+          <div className="bg-green-50 border-2 border-green-500 rounded-lg p-6 mb-8">
+            <div className="flex items-start">
+              <CheckCircle className="w-8 h-8 text-green-500 flex-shrink-0 mt-1" />
+              <div className="ml-4">
+                <h3 className="text-xl font-bold text-green-900 mb-2">
+                  Quote Request Submitted Successfully!
+                </h3>
+                <p className="text-green-800 mb-3">
+                  Thank you for your quote request. We've received your information and will review it carefully.
+                </p>
+                <p className="text-green-800 mb-3">
+                  <strong>What happens next?</strong>
+                </p>
+                <ul className="list-disc list-inside text-green-800 space-y-1 mb-4">
+                  <li>We'll assess the damage details you provided</li>
+                  <li>You'll receive a detailed quote within 24 hours</li>
+                  <li>Our quote will include estimated time and cost</li>
+                </ul>
+                <p className="text-green-800">
+                  If you have urgent questions, call us at <strong>+44 7763459923</strong>
+                </p>
+                <button
+                  onClick={() => setSubmitSuccess(false)}
+                  className="mt-4 text-green-700 hover:text-green-900 font-medium underline"
+                >
+                  Submit Another Quote Request
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Form */}
+        {!submitSuccess && (
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Request Your Quote</h2>
+            
+            <form 
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
+              {/* Hidden fields for Formspree */}
+              <input type="hidden" name="_subject" value="New PDR Quote Request from Dent Master Aberdeenshire Website" />
 
             {/* Personal Information */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -266,10 +337,11 @@ const Quote = () => {
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-md text-lg font-medium"
+              disabled={isSubmitting}
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-md text-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Send className="w-5 h-5 mr-2" />
-              Send Quote Request
+              {isSubmitting ? 'Sending...' : 'Send Quote Request'}
             </Button>
           </form>
 
@@ -304,6 +376,7 @@ const Quote = () => {
             </div>
           </div>
         </div>
+        )}
       </div>
     </div>
   );
