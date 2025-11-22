@@ -1,14 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from './ui/button.jsx';
 import {
   Phone,
   Mail,
   MapPin,
   Send,
-  ArrowLeft
+  ArrowLeft,
+  Camera
 } from 'lucide-react';
 
 const Quote = () => {
+  const [uploadedImages, setUploadedImages] = useState([]);
+  const [isUploading, setIsUploading] = useState(false);
+
+  // Upload images/videos to Cloudinary (free tier: 25GB storage, 25GB bandwidth/month)
+  const handleImageUpload = async (e) => {
+    const files = Array.from(e.target.files);
+    if (files.length === 0) return;
+
+    setIsUploading(true);
+    const uploadedUrls = [];
+
+    try {
+      for (const file of files) {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', 'pdr_quotes'); // Must match preset name you created
+        formData.append('folder', 'pdr_quote_media'); // Your folder name
+
+        // Upload to Cloudinary with your cloud name
+        const response = await fetch('https://api.cloudinary.com/v1_1/dl1oyyiun/image/upload', {
+          method: 'POST',
+          body: formData,
+        });
+
+        const data = await response.json();
+        if (data.secure_url) {
+          uploadedUrls.push({
+            url: data.secure_url,
+            thumbnail: data.thumbnail_url || data.secure_url,
+            public_id: data.public_id
+          });
+        }
+      }
+
+      setUploadedImages([...uploadedImages, ...uploadedUrls]);
+      alert(`${uploadedUrls.length} file(s) uploaded successfully!`);
+    } catch (error) {
+      console.error('Error uploading files:', error);
+      alert('Error uploading files. Please try again or email them directly to Dent.Master.Aberdeenshire@gmail.com');
+    } finally {
+      setIsUploading(false);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,6 +173,65 @@ const Quote = () => {
                 className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                 placeholder="Please describe the dent(s), their location on the vehicle, size (approximate), and how the damage occurred. The more detail you provide, the more accurate our quote will be."
               />
+            </div>
+
+            {/* Photo/Video Upload Section */}
+            <div className="border-2 border-dashed border-orange-300 rounded-lg p-6 bg-orange-50">
+              <div className="flex items-start space-x-4">
+                <Camera className="w-8 h-8 text-orange-500 flex-shrink-0 mt-1" />
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Upload Photos or Videos of the Damage
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    Clear photos or videos help us provide the most accurate quote. Include close-ups and wider angles showing the damaged area.
+                  </p>
+                  
+                  <label className="inline-block">
+                    <input
+                      type="file"
+                      multiple
+                      accept="image/*,video/*"
+                      onChange={handleImageUpload}
+                      disabled={isUploading}
+                      className="hidden"
+                      id="file-upload"
+                    />
+                    <span className="inline-flex items-center px-4 py-2 border border-orange-600 text-orange-600 rounded-md hover:bg-orange-600 hover:text-white transition-colors cursor-pointer">
+                      <Camera className="w-5 h-5 mr-2" />
+                      {isUploading ? 'Uploading...' : 'Choose Files'}
+                    </span>
+                  </label>
+
+                  {uploadedImages.length > 0 && (
+                    <div className="mt-4">
+                      <p className="text-sm font-semibold text-green-700 mb-2">
+                        ✓ {uploadedImages.length} file(s) uploaded successfully
+                      </p>
+                      <div className="grid grid-cols-3 gap-2">
+                        {uploadedImages.map((img, index) => (
+                          <div key={index} className="relative group">
+                            <img 
+                              src={img.thumbnail} 
+                              alt={`Upload ${index + 1}`}
+                              className="w-full h-20 object-cover rounded border border-gray-200"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                      <input 
+                        type="hidden" 
+                        name="uploaded_images" 
+                        value={JSON.stringify(uploadedImages.map(img => img.url))}
+                      />
+                    </div>
+                  )}
+
+                  <p className="text-xs text-gray-500 mt-3">
+                    {isUploading ? '⏳ Uploading to Cloudinary...' : 'Files uploaded to Cloudinary (free & secure). Links will be sent in the email.'}
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Urgency */}

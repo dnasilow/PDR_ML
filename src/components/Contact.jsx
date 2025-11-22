@@ -165,9 +165,9 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: 'Service Area',
-      details: ['Aberdeenshire & Surrounding Areas'],
-      description: 'Mobile service available across the region'
+      title: 'Address',
+      details: ['92 Charlotte St', 'Fraserburgh', 'AB43 9JH', 'Scotland, UK'],
+      description: 'Mobile service available across Aberdeenshire'
     },
     {
       icon: Clock,

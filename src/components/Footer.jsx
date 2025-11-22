@@ -1,4 +1,5 @@
 import { Button } from './ui/button.jsx'
+import { Link } from 'react-router-dom'
 import { 
   Phone, 
   Mail, 
@@ -11,12 +12,12 @@ import {
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'Services', href: '#services' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Case Studies', href: '#case-studies' },
-    { name: 'Our Team', href: '#team' },
-    { name: 'Resources', href: '#resources' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Contact', href: '/contact' }
   ]
 
   const services = [
@@ -86,8 +87,10 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-orange-500 mt-0.5" />
                 <div className="text-gray-300">
-                  <div>Serving Aberdeenshire</div>
-                  <div>& Surrounding Areas</div>
+                  <div>92 Charlotte St</div>
+                  <div>Fraserburgh</div>
+                  <div>AB43 9JH</div>
+                  <div className="mt-1 text-sm">Scotland, UK</div>
                 </div>
               </div>
             </div>
@@ -109,12 +112,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.href}
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
