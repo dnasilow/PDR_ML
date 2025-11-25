@@ -22,7 +22,7 @@ const Team = () => {
       'Specialist in Hail Damage Repair',
       'Advanced Paintless Repair Techniques'
     ],
-    bio: 'Maciej brings over 15 years of specialized European experience in Paintless Dent Repair to Aberdeenshire. Having trained extensively across Europe, he has mastered the art of PDR on thousands of vehicles - from minor dings to complex hail damage repairs. His commitment to preserving your vehicle's original factory finish while delivering flawless results has earned him an outstanding reputation for quality and customer satisfaction.',
+    bio: "Maciej brings over 15 years of specialized European experience in Paintless Dent Repair to Aberdeenshire. Having trained extensively across Europe, he has mastered the art of PDR on thousands of vehicles - from minor dings to complex hail damage repairs. His commitment to preserving your vehicle's original factory finish while delivering flawless results has earned him an outstanding reputation for quality and customer satisfaction.",
     services: [
       'Minor dents & dings (pothole-type damage)',
       'Hail damage repair (all sizes)',

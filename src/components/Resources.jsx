@@ -14,7 +14,7 @@ const Resources = () => {
     {
       icon: Car,
       title: 'The Ultimate Guide to PDR Technology',
-      description: 'A comprehensive guide explaining Paintless Dent Repair (PDR) technology, its benefits, and how it preserves your vehicle's original finish.',
+      description: "A comprehensive guide explaining Paintless Dent Repair (PDR) technology, its benefits, and how it preserves your vehicle's original finish.",
       type: 'Guide',
       pages: '30 pages',
       category: 'PDR Technology',
