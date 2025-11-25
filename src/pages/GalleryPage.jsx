@@ -6,9 +6,9 @@ const GalleryPage = () => {
   return (
     <>
       <SEO 
-        title="Before & After Gallery - PDR Results"
-        description="View our portfolio of successful Paintless Dent Repair work. Real results from luxury vehicles and everyday cars across Aberdeenshire."
-        keywords="PDR before after, dent repair gallery, car repair results, Aberdeenshire PDR work, Fraserburgh dent repair photos"
+        title="PDR Gallery - Before & After Dent Repair Results in Aberdeenshire"
+        description="View our portfolio of successful Paintless Dent Repair transformations. Real before and after results from luxury vehicles (BMW, Audi, Mercedes) and everyday cars across Fraserburgh, Aberdeen, Peterhead, and Aberdeenshire, Scotland."
+        keywords="PDR before after photos, dent repair gallery Scotland, car dent removal results, Aberdeenshire PDR portfolio, Fraserburgh dent repair photos, luxury car dent repair, BMW dent repair, Audi PDR, Mercedes dent removal"
         url="https://dentmaster-aberdeenshire.com/gallery"
         image="/images/before_after.webp"
       />

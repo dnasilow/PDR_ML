@@ -1,9 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ 
-  title = 'Dent Master Aberdeenshire - Professional Paintless Dent Repair',
-  description = 'Expert Paintless Dent Repair (PDR) services in Fraserburgh, Aberdeenshire. Over 15 years of European experience. Mobile service available across Scotland.',
-  keywords = 'paintless dent repair, PDR, dent removal, scratch repair, hail damage repair, car dent repair, Fraserburgh, Aberdeenshire, Scotland',
+  title = 'Dent Master Aberdeenshire - Professional Paintless Dent Repair in Scotland',
+  description = 'Expert Paintless Dent Repair (PDR) services in Fraserburgh, Aberdeen, and across Aberdeenshire, Scotland. Over 15 years of European experience. Mobile service available. Specialising in hail damage, door dings, and scratch removal.',
+  keywords = 'paintless dent repair Scotland, PDR Aberdeenshire, dent removal Fraserburgh, scratch repair Aberdeen, hail damage repair Scotland, car dent repair Peterhead, mobile PDR Scotland, European dent specialist',
   image = '/images/luxury-car-hero.jpg',
   url = 'https://dentmaster-aberdeenshire.com'
 }) => {
@@ -34,11 +34,17 @@ const SEO = ({
 
       {/* Additional Meta Tags */}
       <meta name="robots" content="index, follow" />
-      <meta name="language" content="English" />
+      <meta name="language" content="en-GB" />
+      <meta name="author" content="Dent Master Aberdeenshire" />
       <meta name="geo.region" content="GB-ABD" />
-      <meta name="geo.placename" content="Fraserburgh, Aberdeenshire" />
+      <meta name="geo.placename" content="Fraserburgh, Aberdeenshire, Scotland" />
       <meta name="geo.position" content="57.6919;-2.0052" />
+      <meta name="ICBM" content="57.6919, -2.0052" />
       <link rel="canonical" href={url} />
+      
+      {/* Additional SEO Tags */}
+      <meta name="theme-color" content="#f97316" />
+      <meta name="msapplication-TileColor" content="#f97316" />
     </Helmet>
   );
 };

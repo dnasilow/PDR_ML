@@ -5,9 +5,9 @@ const AboutPage = () => {
   return (
     <>
       <SEO 
-        title="About Us - 15+ Years PDR Experience"
-        description="Meet the Dent Master Aberdeenshire team. Over 15 years of Paintless Dent Repair experience from Europe, now serving Scotland with precision and excellence."
-        keywords="PDR experts, dent repair experience, European PDR technicians, Fraserburgh car repair, Aberdeenshire auto body"
+        title="About Dent Master Aberdeenshire - 15+ Years PDR Experience"
+        description="Meet Maciej Linosz and the Dent Master Aberdeenshire team. Over 15 years of professional Paintless Dent Repair experience from Europe, now serving Fraserburgh, Aberdeen, and all of Aberdeenshire, Scotland with precision, quality, and excellence."
+        keywords="PDR expert Scotland, Maciej Linosz, European PDR technician, experienced dent repair specialist, Fraserburgh car repair professional, Aberdeenshire auto body specialist, mobile PDR technician Scotland"
         url="https://dentmaster-aberdeenshire.com/about"
       />
       <div className="pt-20">
