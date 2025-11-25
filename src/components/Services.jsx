@@ -15,7 +15,7 @@ const Services = () => {
     {
       id: 2,
       title: 'Hail Damage Repair',
-      description: 'Specialized repair for both small and large hail damage across your vehicle\'s body panels.',
+      description: 'Specialized repair for both small and large hail damage across your vehicle's body panels.',
       icon: CloudRain,
       image: '/images/how-much-does-paintless-dent-repair-cost.jpg.webp',
       features: ['Comprehensive damage assessment', 'Advanced PDR techniques', 'Insurance documentation support', 'Complete restoration'],

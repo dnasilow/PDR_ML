@@ -70,7 +70,7 @@ const CaseStudies = () => {
             Our PDR Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how we\'ve helped automotive businesses and individuals 
+            Discover how we've helped automotive businesses and individuals 
             restore their vehicles to perfection with our expert PDR services.
           </p>
         </div>
@@ -179,7 +179,7 @@ const CaseStudies = () => {
         <div className="text-center mt-16 bg-orange-50 rounded-2xl p-8">
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold text-gray-900">
-              Ready to Restore Your Vehicle\'s Perfection?
+              Ready to Restore Your Vehicle's Perfection?
             </h3>
             <p className="text-gray-700 max-w-2xl mx-auto">
               Contact us today for a free estimate and experience the PDR Professional Team difference.
