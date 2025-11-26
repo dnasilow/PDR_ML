@@ -1,0 +1,53 @@
+# Cloudflare Pages Headers and Redirects Configuration
+
+# Force HTTPS redirect
+[[redirects]]
+  from = "http://dentmaster-aberdeenshire.uk/*"
+  to = "https://dentmaster-aberdeenshire.uk/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.dentmaster-aberdeenshire.uk/*"
+  to = "https://www.dentmaster-aberdeenshire.uk/:splat"
+  status = 301
+  force = true
+
+# Security Headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://api.cloudinary.com https://formspree.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://api.cloudinary.com https://formspree.io; frame-src 'self' https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;"
+
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/PDR_Videos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

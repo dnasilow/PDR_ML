@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#f97316" stroke="#1f2937" stroke-width="2"/>
+  
+  <!-- Car silhouette -->
+  <path d="M25 55 L30 45 L40 42 L60 42 L70 45 L75 55 L73 65 L27 65 Z" 
+        fill="#1f2937" stroke="#fff" stroke-width="1.5"/>
+  
+  <!-- Windows -->
+  <path d="M35 45 L40 43 L50 43 L50 50 L35 50 Z" 
+        fill="#60a5fa" opacity="0.7"/>
+  <path d="M52 43 L60 43 L65 45 L65 50 L52 50 Z" 
+        fill="#60a5fa" opacity="0.7"/>
+  
+  <!-- Wheels -->
+  <circle cx="35" cy="65" r="6" fill="#1f2937" stroke="#fff" stroke-width="1"/>
+  <circle cx="35" cy="65" r="3" fill="#4b5563"/>
+  <circle cx="65" cy="65" r="6" fill="#1f2937" stroke="#fff" stroke-width="1"/>
+  <circle cx="65" cy="65" r="3" fill="#4b5563"/>
+  
+  <!-- Sparkle/repair effect (top right) -->
+  <path d="M70 25 L72 30 L77 32 L72 34 L70 39 L68 34 L63 32 L68 30 Z" 
+        fill="#fbbf24" stroke="#fff" stroke-width="0.5"/>
+  <path d="M78 35 L79 38 L82 39 L79 40 L78 43 L77 40 L74 39 L77 38 Z" 
+        fill="#fbbf24" stroke="#fff" stroke-width="0.5"/>
+</svg>

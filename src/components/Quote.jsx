@@ -355,24 +355,24 @@ const Quote = () => {
             <h3 className="text-lg font-semibold text-gray-900 mb-4">Or Contact Us Directly</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 text-orange-500 mr-3" />
+              <div className="flex items-start">
+                <Phone className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-600">Phone</p>
                   <p className="font-medium">+44 07763459923</p>
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 text-orange-500 mr-3" />
-                <div>
+              <div className="flex items-start">
+                <Mail className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" />
+                <div className="min-w-0">
                   <p className="text-sm text-gray-600">Email</p>
-                  <p className="font-medium">dent.master.aberdeenshire@gmail.com</p>
+                  <p className="font-medium text-sm break-all">dent.master.aberdeenshire@gmail.com</p>
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <MapPin className="w-5 h-5 text-orange-500 mr-3" />
+              <div className="flex items-start">
+                <MapPin className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-600">Service Area</p>
                   <p className="font-medium">1-hour radius of Fraserburgh</p>
