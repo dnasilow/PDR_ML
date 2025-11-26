@@ -5,28 +5,46 @@ Your website shows "Not secure" warning because it's being accessed via HTTP ins
 
 ## Solution Steps
 
-### 1. **Cloudflare Pages Automatic SSL**
-Cloudflare Pages provides automatic SSL certificates for all sites. Your site should already have HTTPS enabled.
+### 1. **Your Current Setup**
+✅ You're using Cloudflare DNS (I can see the "Proxied" orange cloud in your screenshot)
+✅ SSL is already enabled on your domain
+✅ DNS records are properly configured
 
-### 2. **Force HTTPS Redirect**
-The `_redirects` file has been added to automatically redirect all HTTP traffic to HTTPS.
+### 2. **Enable HTTPS Redirect in Cloudflare**
 
-### 3. **Configure Your Domain**
+**Step-by-Step Instructions:**
 
-#### Option A: If using Cloudflare DNS (Recommended)
-1. Log into your Cloudflare dashboard: https://dash.cloudflare.com
-2. Select your domain: `dentmaster-aberdeenshire.uk`
-3. Go to **SSL/TLS** settings
-4. Set SSL/TLS encryption mode to **"Full (strict)"**
-5. Enable **"Always Use HTTPS"** under SSL/TLS > Edge Certificates
-6. Enable **"Automatic HTTPS Rewrites"**
-7. Enable **"HSTS (HTTP Strict Transport Security)"**
+1. **Go to SSL/TLS Settings:**
+   - In your Cloudflare dashboard (where you showed the DNS screenshot)
+   - Click on **"SSL/TLS"** in the left sidebar menu
+   - Under **"Overview"**, set the encryption mode to **"Full"** or **"Full (strict)"**
 
-#### Option B: If NOT using Cloudflare DNS
-1. Your domain registrar DNS settings need to point to Cloudflare Pages
-2. Add CNAME record: `dentmaster-aberdeenshire.uk` → `your-project.pages.dev`
-3. Wait for DNS propagation (can take up to 48 hours)
-4. Cloudflare will automatically provision SSL certificate
+2. **Enable Always Use HTTPS:**
+   - Still in **SSL/TLS** section
+   - Click on **"Edge Certificates"** tab (second tab)
+   - Scroll down and toggle **"Always Use HTTPS"** to **ON**
+   - This will automatically redirect all HTTP requests to HTTPS
+
+3. **Enable Automatic HTTPS Rewrites (Optional but Recommended):**
+   - Same **"Edge Certificates"** page
+   - Toggle **"Automatic HTTPS Rewrites"** to **ON**
+   - This fixes mixed content warnings
+
+4. **Enable HSTS (Optional but Recommended):**
+   - Same **"Edge Certificates"** page
+   - Scroll to **"HTTP Strict Transport Security (HSTS)"**
+   - Click **"Enable HSTS"** and accept the warning
+   - Use these settings:
+     - Max Age: 6 months (15768000 seconds)
+     - Include subdomains: ON
+     - Preload: OFF (unless you're sure)
+
+### 3. **Where to Find These Settings**
+
+Looking at your current Cloudflare screen:
+- You're currently in: **DNS → Records**
+- You need to go to: **SSL/TLS** (in the left sidebar)
+- The SSL/TLS menu icon looks like a lock 🔒
 
 ### 4. **Verify HTTPS is Working**
 
@@ -39,17 +57,21 @@ After deployment, test these URLs:
 ### 5. **Common Issues**
 
 **Issue: "Not Secure" warning persists**
-- Solution: Clear browser cache, try incognito mode
-- Check that you're typing `https://` in the URL bar
-- Verify DNS is pointing to Cloudflare
+- Solution: After enabling "Always Use HTTPS", wait 1-2 minutes for changes to propagate
+- Make sure you're typing the full URL: `https://dentmaster-aberdeenshire.uk`
+- Clear browser cache (Ctrl+Shift+Delete) or try incognito mode
+- The "Always Use HTTPS" setting is the key - this must be enabled
 
-**Issue: Certificate error**
-- Solution: Wait 24-48 hours for SSL certificate provisioning
-- Ensure domain is properly connected in Cloudflare Pages settings
+**Issue: Where is my hosting?**
+- Your DNS is on Cloudflare, but where is your website actually hosted?
+- Check Cloudflare dashboard → **Workers & Pages** section
+- OR check if you're using another hosting service (Vercel, Netlify, GitHub Pages, etc.)
+- The CNAME records in your screenshot point to different services
 
-**Issue: Mixed content warning**
-- Solution: All resources (images, scripts, etc.) must load via HTTPS
-- Our code already uses relative URLs and HTTPS endpoints
+**Issue: CNAME records pointing to multiple places**
+- I see `dent-master-aberdeenshire...` and `domainconnect.gd.do...`
+- You may need to consolidate these to one hosting provider
+- If using Cloudflare Pages, you'd see a CNAME pointing to `*.pages.dev`
 
 ### 6. **Update Browser Bookmarks**
 Make sure all bookmarks and links use `https://` instead of `http://`
