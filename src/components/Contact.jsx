@@ -155,13 +155,13 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       details: ['+44 7763459923'],
-      description: 'Available Mon-Sat 9:00 AM - 6:00 PM'
+      description: 'Available Mon-Sat 4:00 PM - 9:00 PM'
     },
     {
       icon: Mail,
       title: 'Email',
       details: ['Dent.Master.Aberdeenshire@gmail.com'],
-      description: 'We respond to all inquiries within 24 hours'
+      description: 'Preferred contact method - We respond within 24 hours'
     },
     {
       icon: MapPin,
@@ -172,7 +172,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Mon-Sat: 9AM - 6PM'],
+      details: ['Mon-Sat: 4PM - 9PM'],
       description: 'Flexible scheduling available'
     }
   ];
@@ -189,6 +189,10 @@ const Contact = () => {
             Have a dent? Send your details and photos for a quick, no-obligation estimate. 
             I'll get back to you within 24 hours.
           </p>
+          <div className="flex items-center justify-center gap-2 text-orange-600 font-medium">
+            <Mail className="h-5 w-5" />
+            <span>Email is our preferred contact method for fastest response</span>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">

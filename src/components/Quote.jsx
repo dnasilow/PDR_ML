@@ -360,14 +360,16 @@ const Quote = () => {
                 <div>
                   <p className="text-sm text-gray-600">Phone</p>
                   <p className="font-medium">+44 07763459923</p>
+                  <p className="text-xs text-gray-500 mt-1">Mon-Sat: 4PM - 9PM</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <Mail className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" />
-                <div className="min-w-0">
-                  <p className="text-sm text-gray-600">Email</p>
-                  <p className="font-medium text-sm break-all">dent.master.aberdeenshire@gmail.com</p>
+                <Mail className="w-5 h-5 text-orange-500 mr-2 mt-1 flex-shrink-0" />
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm text-gray-600">Email (Preferred)</p>
+                  <p className="font-medium text-xs break-all leading-relaxed">dent.master.aberdeenshire@gmail.com</p>
+                  <p className="text-xs text-orange-600 mt-1 font-medium">Fastest response</p>
                 </div>
               </div>
               
