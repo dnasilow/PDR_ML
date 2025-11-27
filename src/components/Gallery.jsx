@@ -78,7 +78,8 @@ const Gallery = () => {
     {
       src: '/images/before_after.webp',
       title: 'Before & After Results',
-      category: 'Dent Removal'
+      category: 'Dent Removal',
+      linkToVideos: true  // This will scroll to video gallery
     },
     {
       src: '/images/luxury-bmw.jpg',
@@ -134,6 +135,12 @@ const Gallery = () => {
             <div 
               key={index} 
               className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+              onClick={() => {
+                if (image.linkToVideos) {
+                  // Scroll to video gallery section
+                  document.getElementById('video-gallery')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               {/* Image */}
               <div className="aspect-[4/3] overflow-hidden">
@@ -173,7 +180,7 @@ const Gallery = () => {
       </div>
 
       {/* Video Gallery Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-20 border-t border-gray-200">
+      <div id="video-gallery" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-20 border-t border-gray-200">
         {/* Video Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Before & After PDR Video Gallery</h2>

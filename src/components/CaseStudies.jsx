@@ -1,4 +1,5 @@
 import { Button } from './ui/button.jsx';
+import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   Car,
@@ -162,13 +163,6 @@ const CaseStudies = () => {
                       );
                     })}
                   </div>
-                  <Button 
-                    variant="outline" 
-                    className="w-full justify-between border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white"
-                  >
-                    View Full Case Study
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
                 </div>
               </div>
             </div>
@@ -185,12 +179,16 @@ const CaseStudies = () => {
               Contact us today for a free estimate and experience the PDR Professional Team difference.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-                Get a Free Quote
-              </Button>
-              <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white">
-                View All Realizations
-              </Button>
+              <Link to="/contact">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Get a Free Quote
+                </Button>
+              </Link>
+              <Link to="/gallery#video-gallery">
+                <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white">
+                  View All Realizations
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
