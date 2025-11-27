@@ -13,6 +13,7 @@ import AboutPage from './pages/AboutPage';
 import GalleryPage from './pages/GalleryPage';
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage';
+import PDRKnowledge from './components/PDRKnowledge';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/team" element={<TeamPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/pdr-knowledge" element={<PDRKnowledge />} />
           </Routes>
         </main>
         <Footer />

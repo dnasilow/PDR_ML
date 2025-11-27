@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Gallery = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -9,6 +10,16 @@ const Gallery = () => {
   
   const beforeVideoRef = useRef(null);
   const afterVideoRef = useRef(null);
+  const location = useLocation();
+
+  // Scroll to video gallery if hash is present
+  useEffect(() => {
+    if (location.hash === '#video-gallery') {
+      setTimeout(() => {
+        document.getElementById('video-gallery')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location]);
 
   // Generate video pairs for folders 1-15
   const videoCases = Array.from({ length: 15 }, (_, i) => ({
@@ -114,7 +125,8 @@ const Gallery = () => {
     {
       src: '/images/3558-hero-what-to-know-paintless-dent-repair.avif',
       title: 'PDR Knowledge',
-      category: 'Professional Service'
+      category: 'Professional Service',
+      linkToPDR: true  // This will link to PDR knowledge page
     }
   ];
 
@@ -131,19 +143,25 @@ const Gallery = () => {
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {workImages.map((image, index) => (
-            <div 
-              key={index} 
-              className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
-              onClick={() => {
-                if (image.linkToVideos) {
-                  // Scroll to video gallery section
-                  document.getElementById('video-gallery')?.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              {/* Image */}
-              <div className="aspect-[4/3] overflow-hidden">
+          {workImages.map((image, index) => {
+            // Determine if this image should be a link
+            const ImageWrapper = image.linkToPDR ? Link : 'div';
+            const wrapperProps = image.linkToPDR ? { to: '/pdr-knowledge' } : {};
+            
+            return (
+              <ImageWrapper
+                key={index}
+                {...wrapperProps}
+                className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer block"
+                onClick={() => {
+                  if (image.linkToVideos) {
+                    // Scroll to video gallery section
+                    document.getElementById('video-gallery')?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                {/* Image */}
+                <div className="aspect-[4/3] overflow-hidden">
                 <img 
                   src={image.src} 
                   alt={image.title}
@@ -163,19 +181,20 @@ const Gallery = () => {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-gray-900/80 to-transparent p-4 group-hover:opacity-0 transition-opacity duration-300">
                 <div className="text-white text-lg font-semibold">{image.title}</div>
               </div>
-            </div>
-          ))}
+            </ImageWrapper>
+          );
+          })}
         </div>
 
         {/* Call to Action */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">Ready to restore your vehicle to like-new condition?</p>
-          <a 
-            href="#contact" 
+          <Link 
+            to="/contact" 
             className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-md text-lg font-medium transition-colors"
           >
             Get Your Free Quote
-          </a>
+          </Link>
         </div>
       </div>
 
