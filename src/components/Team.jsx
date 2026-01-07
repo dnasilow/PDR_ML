@@ -1,4 +1,5 @@
 import { Button } from './ui/button.jsx';
+import { Link } from 'react-router-dom';
 import {
   Mail,
   Award,
@@ -189,9 +190,11 @@ const Team = () => {
             Get in touch today for a free quote. I'll personally assess your vehicle's damage 
             and provide honest advice on the best repair approach.
           </p>
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white" size="lg">
-            Request Your Free Quote
-          </Button>
+          <Link to="/contact">
+            <Button className="bg-orange-500 hover:bg-orange-600 text-white" size="lg">
+              Request Your Free Quote
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -16,6 +16,7 @@ const Header = () => {
 
   const handleLinkClick = () => {
     setMobileMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -35,6 +36,7 @@ const Header = () => {
               <Link
                 key={link.to}
                 to={link.to}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="text-gray-700 hover:text-orange-600 transition-colors"
               >
                 {link.label}
@@ -42,6 +44,7 @@ const Header = () => {
             ))}
             <Link
               to="/contact"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-md transition-colors"
             >
               Get a Quote

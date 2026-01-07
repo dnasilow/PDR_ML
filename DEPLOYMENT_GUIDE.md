@@ -14,7 +14,7 @@ Since you're already using **Cloudflare DNS** for `dentmaster-aberdeenshire.uk`,
 3. You should see `dentmaster-aberdeenshire.uk` in your domains list
 
 ### Step 2: Navigate to Workers & Pages
-1. In the left sidebar, click **"Workers & Pages"**
+1. In the left sidebar, click **"Workers & Pages"** 
 2. Click the **"Create application"** button
 3. Select the **"Pages"** tab
 4. Click **"Connect to Git"**
