@@ -64,7 +64,7 @@ const Team = () => {
               {/* Image */}
               <div className="md:w-2/5 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center p-12 relative overflow-hidden">
                 <img 
-                  src="/images/maciej-linosz.jpg"
+                  src="/images/maciej-linosz.png"
                   alt="Maciej Linosz - Owner & Master PDR Technician"
                   className="absolute inset-0 w-full h-full object-cover"
                   onError={(e) => {
@@ -80,7 +80,7 @@ const Team = () => {
                       </div>
                       <div class="text-white">
                         <p class="text-sm font-semibold mb-2">Add Professional Photo</p>
-                        <p class="text-xs opacity-80">Place image at: /public/images/maciej-linosz.jpg</p>
+                        <p class="text-xs opacity-80">Place image at: /public/images/maciej-linosz.png</p>
                       </div>
                     `;
                     e.target.parentElement.appendChild(fallback);
